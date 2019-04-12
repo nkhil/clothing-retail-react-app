@@ -15,15 +15,23 @@ Steps to setup and run the project locally:
 
 ## Testing
 
+This project uses `jest` along with `react-test-renderer` for unit testing and `cypress` for integration testing.
+
 Steps to run the test suite:
+
+**Unit tests:**
 
 - From the application root, run `npm run test`. This will start the test suite in `watchAll` mode by default
 - To update the Jest snapshots, run `npm run updatesnapshot`
 
+**Feature (integration) tests:**
+
+- From the application root, run `npm run cypress`.
+
 ## Technologies used
 
 - Built using React.js from scratch (i.e. not create react app)
-- Tested using `jest` along with `react-test-renderer`
+- Tested using `cypress` and `jest` along with `react-test-renderer`
 - `parcel` for development server and build
 
 # Approach

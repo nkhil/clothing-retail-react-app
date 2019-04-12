@@ -4,7 +4,8 @@
   "description": "responsive react app that allows users to see and buy clothing",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "parcel public/index.html"
   },
   "author": "Nikhil Vijayan",
   "license": "MIT",

@@ -1,0 +1,30 @@
+{
+  "name": "clothing-retail-website",
+  "version": "1.0.0",
+  "description": "responsive react app that allows users to see and buy clothing",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Nikhil Vijayan",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^24.5.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "react-test-renderer": "^16.8.6",
+    "styled-components": "^4.2.0",
+    "styled-normalize": "^8.0.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "cypress": "^3.2.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-cypress": "^2.2.1",
+    "eslint-plugin-react": "^7.12.4"
+  }
+}

@@ -1,0 +1,5 @@
+exclude_patterns:
+  - "cypress/**"
+  - "dist/"
+  - "**/node_modules/"
+  - "**/__test__/"

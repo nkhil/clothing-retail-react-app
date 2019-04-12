@@ -6,9 +6,19 @@
 
 ## Project setup
 
-Follow these steps to setup and run this project locally:
+Steps to setup and run the project locally:
 
-- Clone or fork this repo with `git clone <repository name>`
+- Clone or fork this repo with `git clone https://github.com/nkhil/clothing-retail-react-app.git`
+- Go into the application root with `cd clothing-retail-react-app`
+- To start the server, type `npm run start`
+- Visit `http://localhost:1234/` in any modern browser to see the app in action
+
+## Testing
+
+Steps to run the test suite:
+
+- From the application root, run `npm run test`. This will start the test suite in `watchAll` mode by default
+- To update the Jest snapshots, run `npm run updatesnapshot`
 
 ## Technologies used
 
@@ -24,9 +34,13 @@ I've followed the [Atomic commit message](https://seesparkbox.com/foundry/atomic
 
 I've also used [Gitmoji](https://gitmoji.carloscuesta.me/) to select few commits (for eg: new features or new dependencies) to keep them distinct and easily recognisable.
 
+## Git strategy
+
+I worked on the master branch to create a working 'hello world' react app. After that, I created a `dev` branch, and every feature was developed on its own branch followed by a pull request to merge into `dev` and subsequently into `master`. Once merged, older branches were then deleted.
+
 ## Styling
 
-- As styling was not a requirement, I've kept the styling to a minimum
+- As styling the application was not a requirement, I've kept the styling to a minimum
 - This project uses `styled-components` for the styling, and uses a [reusable component system](https://levelup.gitconnected.com/building-a-reusable-component-system-with-react-js-and-styled-components-4e9f1018a31c) which allows to keep the code clean, and abstract the presentation layer, while still keeping the styling declarative and readable (for eg: `<Flex column contentCenter alignCenter>` or `<Header h3>`)
 - I'm using simple flexbox containers in order to make the application responsive on desktop, mobile phones and tablets.
 

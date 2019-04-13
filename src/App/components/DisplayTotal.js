@@ -5,7 +5,9 @@ class DisplayTotal extends Component {
   render = () => {
     return (
       <Fragment>
-        <h3 id="total">Total: {formatPrice(this.props.calculateTotal())}</h3>
+        <h3 id="total">
+          Total: {formatPrice(this.props.calculateDiscountedTotal())}
+        </h3>
       </Fragment>
     )
   }

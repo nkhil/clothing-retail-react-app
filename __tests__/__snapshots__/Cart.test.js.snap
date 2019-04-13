@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShoppingCart renders correctly 1`] = `
+<div
+  id="shoppingCart"
+>
+  <h2>
+    Basket:
+  </h2>
+  <ul>
+    <li
+      id="product1"
+    >
+      <h3>
+        Almond Toe Court Shoes, Patent Black
+         x 
+        1
+      </h3>
+      <button
+        className="remove-item"
+        onClick={[Function]}
+      >
+        Remove
+      </button>
+    </li>
+    <li
+      id="product2"
+    >
+      <h3>
+        Suede Shoes, Blue
+         x 
+        1
+      </h3>
+      <button
+        className="remove-item"
+        onClick={[Function]}
+      >
+        Remove
+      </button>
+    </li>
+  </ul>
+</div>
+`;

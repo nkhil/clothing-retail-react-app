@@ -9,6 +9,7 @@ class App extends Component {
     products: {},
     shoppingCart: {},
     VoucherCodes: [],
+    activeVoucherCode: null,
   }
 
   componentWillMount = () => {

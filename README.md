@@ -42,9 +42,11 @@ I've followed the [Atomic commit message](https://seesparkbox.com/foundry/atomic
 
 I've also used [Gitmoji](https://gitmoji.carloscuesta.me/) to select few commits (for eg: new features or new dependencies) to keep them distinct and easily recognisable.
 
-## Git strategy
+## Git branching approach
 
-I worked on the master branch to create a working 'hello world' react app. After that, I created a `dev` branch, and every feature was developed on its own branch followed by a pull request to merge into `dev` and subsequently into `master`. Once merged, older branches were then deleted.
+I worked on the master branch to create a working 'hello world' react app that loads mock product data (supplied in the requirements) into the application state (`App.state.products`).
+
+Following that, all work is carried out on the `dev` branch, and every feature was developed on its own branch followed by a pull request to merge into `dev` and subsequently into `master`. Once merged, branches are deleted.
 
 ## Styling
 

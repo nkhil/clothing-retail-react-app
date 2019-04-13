@@ -3,6 +3,6 @@ const five = { code: "FIVEOFF", discountAmount: 500 }
 const ten = { code: "TENOFF", discountAmount: 1000 }
 const fifteen = { code: "FIFTEENOFF", discountAmount: 1500 }
 
-const VoucherCodes = [five, ten, fifteen]
+const voucherCodes = [five, ten, fifteen]
 
-export default VoucherCodes
+export default voucherCodes

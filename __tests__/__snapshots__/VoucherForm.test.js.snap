@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VoucherForm renders correctly 1`] = `
+<form
+  id="voucher-form"
+  onSubmit={[Function]}
+>
+  <input
+    name="discount-code"
+    placeholder="Voucher code"
+    type="text"
+  />
+  <button
+    type="submit"
+  >
+    Submit
+  </button>
+</form>
+`;

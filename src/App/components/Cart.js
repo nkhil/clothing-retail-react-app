@@ -1,9 +1,9 @@
-import React, { PureComponent, Fragment } from "react"
+import React, { Component, Fragment } from "react"
 import ShoppingCartItem from "./CartItem"
 import DisplayTotal from "./DisplayTotal"
 import VoucherForm from "./VoucherForm"
 
-class ShoppingCart extends PureComponent {
+class ShoppingCart extends Component {
   render = () => {
     return (
       <Fragment>
@@ -20,8 +20,13 @@ class ShoppingCart extends PureComponent {
               />
             ))}
           </ul>
-          <VoucherForm />
-          <DisplayTotal calculateTotal={this.props.calculateTotal} />
+          <VoucherForm
+            voucherCodeIsValid={this.props.voucherCodeIsValid}
+            setActiveVoucherCode={this.props.setActiveVoucherCode}
+          />
+          <DisplayTotal
+            calculateDiscountedTotal={this.props.calculateDiscountedTotal}
+          />
         </div>
       </Fragment>
     )

@@ -6,14 +6,14 @@ exports[`VoucherForm renders correctly 1`] = `
   onSubmit={[Function]}
 >
   <input
-    name="discount-code"
+    name="voucher-code"
     placeholder="Voucher code"
     type="text"
   />
   <button
     type="submit"
   >
-    Submit
+    Apply
   </button>
 </form>
 `;

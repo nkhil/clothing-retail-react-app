@@ -6,11 +6,13 @@ import renderer from "react-test-renderer"
 require("react-router-dom")
 jest.mock("react-router-dom")
 
-const mockCalculateTotal = () => 2300
+const mockCalculateDiscountedTotal = () => 2300
 
 test("DisplayTotal renders correctly", () => {
   const displayTotal = renderer
-    .create(<DisplayTotal calculateTotal={mockCalculateTotal} />)
+    .create(
+      <DisplayTotal calculateDiscountedTotal={mockCalculateDiscountedTotal} />
+    )
     .toJSON()
   expect(displayTotal).toMatchSnapshot()
 })

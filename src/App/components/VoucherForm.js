@@ -13,6 +13,7 @@ class VoucherForm extends Component {
         <form id="voucher-form" onSubmit={this.handleSubmit}>
           <input
             type="text"
+            name="voucher-code"
             ref={this.voucherCodeRef}
             placeholder="Voucher code"
           />

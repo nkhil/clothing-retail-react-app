@@ -56,6 +56,17 @@ class App extends Component {
     return cartTotal
   }
 
+  calculateDiscountedTotal = () => {
+    if (this.state.activeVoucherCode) {
+      const discountAmount = this._getVoucherObject(
+        this.state.activeVoucherCode
+      ).discountAmount
+      const discountedTotal = this.calculateTotal() - discountAmount
+      return discountedTotal
+    }
+    return this.calculateTotal()
+  }
+
   setActiveVoucherCode = VoucherCode => {
     this.setState({ activeVoucherCode: VoucherCode })
   }

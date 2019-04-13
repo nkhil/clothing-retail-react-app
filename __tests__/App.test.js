@@ -49,6 +49,21 @@ test("calculateTotal()", () => {
   expect(componentInstance.calculateTotal()).toEqual(4200)
 })
 
+test("calculateDiscountedTotal() in the presence of discount code", () => {
+  const component = renderer.create(<App />)
+  const componentInstance = component.getInstance()
+  componentInstance.addToCart("product1")
+  componentInstance.setActiveVoucherCode("FIVEOFF")
+  expect(componentInstance.calculateDiscountedTotal()).toEqual(9400)
+})
+
+test("calculateDiscountedTotal() in the absence of discount code", () => {
+  const component = renderer.create(<App />)
+  const componentInstance = component.getInstance()
+  componentInstance.addToCart("product1")
+  expect(componentInstance.calculateDiscountedTotal()).toEqual(9900)
+})
+
 test("voucherCodeIsValid() with valid voucher code", () => {
   const mockDiscountCode = { code: "TEST", discountAmount: 500 }
   const component = renderer.create(<App />)

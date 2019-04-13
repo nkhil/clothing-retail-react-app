@@ -20,6 +20,13 @@ class App extends Component {
     shoppingCart[key] = shoppingCart[key] + 1 || 1
     this.setState({ shoppingCart })
   }
+
+  deductProductFromInventory = key => {
+    let products = { ...this.state.products }
+    products[key].productQuantity -= 1
+    this.setState({ products })
+  }
+
   render = () => {
     return (
       <Fragment>

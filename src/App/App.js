@@ -10,10 +10,10 @@ class App extends Component {
   }
 
   componentWillMount = () => {
-    this.loadProductsIntoState()
+    this.loadProductsIntoState(products)
   }
 
-  loadProductsIntoState = () => {
+  loadProductsIntoState = products => {
     this.setState({ products })
   }
 

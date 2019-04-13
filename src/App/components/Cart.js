@@ -1,6 +1,7 @@
 import React, { PureComponent, Fragment } from "react"
 import ShoppingCartItem from "./CartItem"
 import DisplayTotal from "./DisplayTotal"
+import VoucherForm from "./VoucherForm"
 
 class ShoppingCart extends PureComponent {
   render = () => {
@@ -19,6 +20,7 @@ class ShoppingCart extends PureComponent {
               />
             ))}
           </ul>
+          <VoucherForm />
           <DisplayTotal calculateTotal={this.props.calculateTotal} />
         </div>
       </Fragment>

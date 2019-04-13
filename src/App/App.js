@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react"
 import products from "./helpers/products"
+import ProductList from "./components/ProductList"
 
 class App extends Component {
   state = {
@@ -30,7 +31,11 @@ class App extends Component {
   render = () => {
     return (
       <Fragment>
-        <h1>Hello World</h1>
+        <ProductList
+          products={this.state.products}
+          addToCart={this.addToCart}
+          deductProductFromInventory={this.deductProductFromInventory}
+        />
       </Fragment>
     )
   }

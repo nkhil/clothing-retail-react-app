@@ -8,7 +8,7 @@ class App extends Component {
   state = {
     products: {},
     shoppingCart: {},
-    VoucherCodes: [],
+    voucherCodes: [],
     activeVoucherCode: null,
   }
 
@@ -67,20 +67,20 @@ class App extends Component {
     return this.calculateTotal()
   }
 
-  setActiveVoucherCode = VoucherCode => {
-    this.setState({ activeVoucherCode: VoucherCode })
+  setActiveVoucherCode = voucherCode => {
+    this.setState({ activeVoucherCode: voucherCode })
   }
 
-  VoucherCodeIsValid = VoucherCode => {
-    const VoucherObject = this._getVoucherObject(VoucherCode)
-    return VoucherObject ? true : false
+  voucherCodeIsValid = voucherCode => {
+    const voucherObject = this._getVoucherObject(voucherCode)
+    return voucherObject ? true : false
   }
 
-  _getVoucherObject = VoucherCode => {
-    const VoucherObject = this.state.VoucherCodes.filter(
-      VoucherObject => VoucherObject.code === VoucherCode
+  _getVoucherObject = voucherCode => {
+    const voucherObject = this.state.voucherCodes.filter(
+      voucherObject => voucherObject.code === voucherCode
     )
-    return VoucherObject[0]
+    return voucherObject[0]
   }
 
   render = () => {
@@ -96,7 +96,7 @@ class App extends Component {
           shoppingCart={this.state.shoppingCart}
           removeFromCart={this.removeFromCart}
           calculateDiscountedTotal={this.calculateDiscountedTotal}
-          VoucherCodeIsValid={this.VoucherCodeIsValid}
+          voucherCodeIsValid={this.voucherCodeIsValid}
           setActiveVoucherCode={this.setActiveVoucherCode}
         />
       </Fragment>

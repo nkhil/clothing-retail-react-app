@@ -17,7 +17,7 @@ class VoucherForm extends Component {
             ref={this.discountVoucherRef}
             placeholder="Voucher code"
           />
-          <button type="submit">Submit</button>
+          <button type="submit">Apply</button>
         </form>
       </Fragment>
     )

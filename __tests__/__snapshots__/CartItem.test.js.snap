@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShoppingCart renders correctly 1`] = `
+<li
+  id="product1"
+>
+  <h3>
+    Almond Toe Court Shoes, Patent Black
+     x 
+    1
+  </h3>
+  <button
+    className="remove-item"
+    onClick={[Function]}
+  >
+    Remove
+  </button>
+</li>
+`;

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductList renders correctly 1`] = `
+<ul>
+  <li
+    id="product1"
+  >
+    <h3>
+      Almond Toe Court Shoes, Patent Black
+    </h3>
+    <h4>
+      £99.00
+    </h4>
+    <p>
+      Women's Footwear
+    </p>
+    <button
+      className="product1-button"
+      onClick={[Function]}
+    >
+      Add to cart
+    </button>
+  </li>
+  <li
+    id="product2"
+  >
+    <h3>
+      Suede Shoes, Blue
+    </h3>
+    <h4>
+      £42.00
+    </h4>
+    <p>
+      Women's Footwear
+    </p>
+    <button
+      className="product2-button"
+      onClick={[Function]}
+    >
+      Add to cart
+    </button>
+  </li>
+</ul>
+`;

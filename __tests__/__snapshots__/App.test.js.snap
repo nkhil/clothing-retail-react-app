@@ -239,6 +239,12 @@ Array [
       Basket:
     </h2>
     <ul />
+    <h3
+      id="total"
+    >
+      Total: 
+      £0.00
+    </h3>
   </div>,
 ]
 `;

@@ -39,5 +39,11 @@ exports[`ShoppingCart renders correctly 1`] = `
       </button>
     </li>
   </ul>
+  <h3
+    id="total"
+  >
+    Total: 
+    £23.00
+  </h3>
 </div>
 `;

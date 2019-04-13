@@ -41,3 +41,10 @@ test("removeFromCart()", () => {
   componentInstance.removeFromCart("product1")
   expect(componentInstance.state.shoppingCart).toEqual({})
 })
+
+test("calculateTotal()", () => {
+  const component = renderer.create(<App />)
+  const componentInstance = component.getInstance()
+  componentInstance.addToCart("product2")
+  expect(componentInstance.calculateTotal()).toEqual(4200)
+})

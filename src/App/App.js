@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react"
 import products from "./helpers/products"
+import VoucherCodes from "./helpers/voucherCodes"
 import ProductList from "./components/ProductList"
 import ShoppingCart from "./components/Cart"
 
@@ -7,14 +8,20 @@ class App extends Component {
   state = {
     products: {},
     shoppingCart: {},
+    VoucherCodes: [],
   }
 
   componentWillMount = () => {
     this.loadProductsIntoState(products)
+    this.loadVoucherCodesIntoState(VoucherCodes)
   }
 
   loadProductsIntoState = products => {
     this.setState({ products })
+  }
+
+  loadVoucherCodesIntoState = VoucherCodes => {
+    this.setState({ VoucherCodes })
   }
 
   addToCart = key => {

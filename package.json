@@ -11,6 +11,7 @@
   "author": "Nikhil Vijayan",
   "license": "MIT",
   "dependencies": {
+    "@babel/polyfill": "^7.4.3",
     "jest": "^24.5.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -28,5 +29,11 @@
     "eslint": "^5.16.0",
     "eslint-plugin-cypress": "^2.2.1",
     "eslint-plugin-react": "^7.12.4"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "modulePathIgnorePatterns": [
+      "<rootDir>/cypress/"
+    ]
   }
 }

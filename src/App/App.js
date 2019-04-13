@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react"
 import products from "./helpers/products"
-import VoucherCodes from "./helpers/voucherCodes"
+import voucherCodes from "./helpers/voucherCodes"
 import ProductList from "./components/ProductList"
 import ShoppingCart from "./components/Cart"
 
@@ -14,7 +14,7 @@ class App extends Component {
 
   componentWillMount = () => {
     this.loadProductsIntoState(products)
-    this.loadVoucherCodesIntoState(VoucherCodes)
+    this.loadVoucherCodesIntoState(voucherCodes)
   }
 
   loadProductsIntoState = products => {
@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   loadVoucherCodesIntoState = VoucherCodes => {
-    this.setState({ VoucherCodes })
+    this.setState({ voucherCodes })
   }
 
   addToCart = key => {
@@ -78,7 +78,7 @@ class App extends Component {
 
   _getVoucherObject = voucherCode => {
     const voucherObject = this.state.voucherCodes.filter(
-      voucherObject => voucherObject.code === voucherCode
+      voucher => voucher.code === voucherCode
     )
     return voucherObject[0]
   }

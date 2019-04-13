@@ -4,6 +4,7 @@ import products from "./helpers/products"
 class App extends Component {
   state = {
     products: {},
+    shoppingCart: {},
   }
 
   componentWillMount = () => {

@@ -56,6 +56,10 @@ class App extends Component {
     return cartTotal
   }
 
+  setActiveVoucherCode = VoucherCode => {
+    this.setState({ activeVoucherCode: VoucherCode })
+  }
+
   VoucherCodeIsValid = VoucherCode => {
     const VoucherObject = this._getVoucherObject(VoucherCode)
     return VoucherObject ? true : false

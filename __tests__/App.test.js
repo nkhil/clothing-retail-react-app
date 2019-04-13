@@ -64,3 +64,12 @@ test("voucherCodeIsValid() with invalid voucher code", () => {
   componentInstance.state.VoucherCodes = [mockDiscountCode]
   expect(componentInstance.VoucherCodeIsValid("TES")).toEqual(false)
 })
+
+test("setActiveVoucherCode()", () => {
+  const component = renderer.create(<App />)
+  const componentInstance = component.getInstance()
+  const mockDiscountCode = { code: "TEST", discountAmount: 500 }
+  componentInstance.state.VoucherCodes = [mockDiscountCode]
+  componentInstance.setActiveVoucherCode("TEST")
+  expect(componentInstance.state.activeVoucherCode).toEqual("TEST")
+})

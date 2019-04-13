@@ -9,6 +9,7 @@ class VoucherForm extends Component {
     if (this.props.voucherCodeIsValid(voucherCode)) {
       this.props.setActiveVoucherCode(voucherCode)
     }
+    alert("Invalid discount code")
   }
 
   render = () => {

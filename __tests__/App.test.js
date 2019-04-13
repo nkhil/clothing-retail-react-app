@@ -33,3 +33,11 @@ test("deductProductFromInventory()", () => {
     4
   )
 })
+
+test("removeFromCart()", () => {
+  const component = renderer.create(<App />)
+  const componentInstance = component.getInstance()
+  componentInstance.addToCart("product1")
+  componentInstance.removeFromCart("product1")
+  expect(componentInstance.state.shoppingCart).toEqual({})
+})

@@ -23,6 +23,15 @@ class App extends Component {
     this.setState({ shoppingCart })
   }
 
+  removeFromCart = key => {
+    const shoppingCart = { ...this.state.shoppingCart }
+    shoppingCart[key] = shoppingCart[key] - 1
+    if (shoppingCart[key] <= 0) {
+      delete shoppingCart[key]
+    }
+    this.setState({ shoppingCart })
+  }
+
   deductProductFromInventory = key => {
     let products = { ...this.state.products }
     products[key].productQuantity -= 1

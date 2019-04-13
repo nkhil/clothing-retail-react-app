@@ -1,7 +1,7 @@
-import React, { PureComponent, Fragment } from "react"
+import React, { Component, Fragment } from "react"
 
-class VoucherForm extends PureComponent {
-  discountVoucherRef = React.createRef()
+class VoucherForm extends Component {
+  voucherCodeRef = React.createRef()
 
   handleSubmit = e => {
     e.preventDefault()

@@ -14,6 +14,7 @@ class ShoppingCart extends PureComponent {
                 index={key}
                 numberOfItems={this.props.shoppingCart[key]}
                 product={this.props.products[key]}
+                removeFromCart={this.props.removeFromCart}
               />
             ))}
           </ul>

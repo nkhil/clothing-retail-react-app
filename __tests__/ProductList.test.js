@@ -1,6 +1,6 @@
 import "@babel/polyfill"
 import React from "react"
-import ShoppingCart from "../src/App/components/Cart"
+import ProductList from "../src/App/components/ProductList"
 import renderer from "react-test-renderer"
 
 require("react-router-dom")
@@ -21,21 +21,22 @@ const mockProducts = {
   },
 }
 
-const mockShoppingCart = { product1: 1, product2: 1 }
+const mockAddToCart = () => {}
+const mockDeductProductFromInventory = () => {}
 
-const mockRemoveFromCart = () => {}
-const mockCalculateTotal = () => 2300
-
-test("ShoppingCart renders correctly", () => {
-  const shoppingCart = renderer
+test("ProductList renders correctly", () => {
+  const productList = renderer
     .create(
-      <ShoppingCart
+      <ProductList
         products={mockProducts}
-        shoppingCart={mockShoppingCart}
-        removeFromCart={mockRemoveFromCart}
-        calculateTotal={mockCalculateTotal}
+        addToCart={mockAddToCart}
+        deductProductFromInventory={mockDeductProductFromInventory}
       />
     )
     .toJSON()
-  expect(shoppingCart).toMatchSnapshot()
+  expect(productList).toMatchSnapshot()
 })
+
+// products={this.state.products}
+// addToCart={this.addToCart}
+// deductProductFromInventory={this.deductProductFromInventory}

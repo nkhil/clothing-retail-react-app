@@ -95,6 +95,7 @@ class App extends Component {
           products={this.state.products}
           shoppingCart={this.state.shoppingCart}
           removeFromCart={this.removeFromCart}
+          calculateDiscountedTotal={this.calculateDiscountedTotal}
           VoucherCodeIsValid={this.VoucherCodeIsValid}
           setActiveVoucherCode={this.setActiveVoucherCode}
         />

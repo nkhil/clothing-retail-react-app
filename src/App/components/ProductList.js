@@ -1,0 +1,24 @@
+import React, { PureComponent, Fragment } from "react"
+import ProductItem from "./ProductItem"
+
+class ProductList extends PureComponent {
+  render = () => {
+    return (
+      <Fragment>
+        <ul>
+          {Object.keys(this.props.products).map(key => (
+            <ProductItem
+              key={key}
+              details={this.props.products[key]}
+              index={key}
+              addToCart={this.props.addToCart}
+              deductProductFromInventory={this.props.deductProductFromInventory}
+            />
+          ))}
+        </ul>
+      </Fragment>
+    )
+  }
+}
+
+export default ProductList

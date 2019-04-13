@@ -1,7 +1,244 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders correctly 1`] = `
-<h1>
-  Hello World
-</h1>
+Array [
+  <ul>
+    <li
+      id="product1"
+    >
+      <h3>
+        Almond Toe Court Shoes, Patent Black
+      </h3>
+      <h4>
+        £99.00
+      </h4>
+      <p>
+        Women's Footwear
+      </p>
+      <button
+        className="product1-button"
+        onClick={[Function]}
+      >
+        Add to cart
+      </button>
+    </li>
+    <li
+      id="product2"
+    >
+      <h3>
+        Suede Shoes, Blue
+      </h3>
+      <h4>
+        £42.00
+      </h4>
+      <p>
+        Women's Footwear
+      </p>
+      <button
+        className="product2-button"
+        onClick={[Function]}
+      >
+        Add to cart
+      </button>
+    </li>
+    <li
+      id="product3"
+    >
+      <h3>
+        Leather Driver Saddle Loafers, Tan
+      </h3>
+      <h4>
+        £34.00
+      </h4>
+      <p>
+        Men's Footwear
+      </p>
+      <button
+        className="product3-button"
+        onClick={[Function]}
+      >
+        Add to cart
+      </button>
+    </li>
+    <li
+      id="product4"
+    >
+      <h3>
+        Flip Flops, Red
+      </h3>
+      <h4>
+        £19.00
+      </h4>
+      <p>
+        Men's Footwear
+      </p>
+      <button
+        className="product4-button"
+        onClick={[Function]}
+      >
+        Add to cart
+      </button>
+    </li>
+    <li
+      id="product5"
+    >
+      <h3>
+        Flip Flops, Blue
+      </h3>
+      <h4>
+        £19.00
+      </h4>
+      <p>
+        Men's Footwear
+      </p>
+      <button
+        className="product5-button"
+        onClick={[Function]}
+      >
+        Add to cart
+      </button>
+    </li>
+    <li
+      id="product6"
+    >
+      <h3>
+        Gold Button Cardigan, Black
+      </h3>
+      <h4>
+        £167.00
+      </h4>
+      <p>
+        Women’s Casualwear
+      </p>
+      <button
+        className="product6-button"
+        onClick={[Function]}
+      >
+        Add to cart
+      </button>
+    </li>
+    <li
+      id="product7"
+    >
+      <h3>
+        Cotton Shorts, Medium Red
+      </h3>
+      <h4>
+        £30.00
+      </h4>
+      <p>
+        Women’s Casualwear
+      </p>
+      <button
+        className="product7-button"
+        onClick={[Function]}
+      >
+        Add to cart
+      </button>
+    </li>
+    <li
+      id="product8"
+    >
+      <h3>
+        Fine Stripe Short Sleeve Shirt, Grey
+      </h3>
+      <h4>
+        £49.99
+      </h4>
+      <p>
+        Men’s Casualwear
+      </p>
+      <button
+        className="product8-button"
+        onClick={[Function]}
+      >
+        Add to cart
+      </button>
+    </li>
+    <li
+      id="product9"
+    >
+      <h3>
+        Fine Stripe Short Sleeve Shirt, Green
+      </h3>
+      <h4>
+        £39.99
+      </h4>
+      <p>
+        Men’s Casualwear
+      </p>
+      <button
+        className="product9-button"
+        onClick={[Function]}
+      >
+        Add to cart
+      </button>
+    </li>
+    <li
+      id="product10"
+    >
+      <h3>
+        Sharkskin Waistcoat, Charcoal
+      </h3>
+      <h4>
+        £75.00
+      </h4>
+      <p>
+        Men’s Formalwear
+      </p>
+      <button
+        className="product10-button"
+        onClick={[Function]}
+      >
+        Add to cart
+      </button>
+    </li>
+    <li
+      id="product11"
+    >
+      <h3>
+        Bird Print Dress, Black
+      </h3>
+      <h4>
+        £270.00
+      </h4>
+      <p>
+        Women’s Formalwear
+      </p>
+      <button
+        className="product11-button"
+        onClick={[Function]}
+      >
+        Add to cart
+      </button>
+    </li>
+    <li
+      id="product12"
+    >
+      <h3>
+        Mid Twist Cut­Out Dress, Pink
+      </h3>
+      <h4>
+        £540.00
+      </h4>
+      <p>
+        Women’s Formalwear
+      </p>
+      <button
+        className="product12-button"
+        onClick={[Function]}
+      >
+        Add to cart
+      </button>
+    </li>
+  </ul>,
+  <div
+    id="shoppingCart"
+  >
+    <h2>
+      Basket:
+    </h2>
+    <ul />
+  </div>,
+]
 `;

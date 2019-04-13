@@ -49,6 +49,7 @@ class App extends Component {
         <ShoppingCart
           products={this.state.products}
           shoppingCart={this.state.shoppingCart}
+          removeFromCart={this.removeFromCart}
         />
       </Fragment>
     )

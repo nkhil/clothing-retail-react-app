@@ -244,14 +244,14 @@ Array [
       onSubmit={[Function]}
     >
       <input
-        name="discount-code"
+        name="voucher-code"
         placeholder="Voucher code"
         type="text"
       />
       <button
         type="submit"
       >
-        Submit
+        Apply
       </button>
     </form>
     <h3

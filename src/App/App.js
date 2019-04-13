@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react"
 import products from "./helpers/products"
+import voucherCodes from "./helpers/voucherCodes"
 import ProductList from "./components/ProductList"
 import ShoppingCart from "./components/Cart"
 
@@ -7,14 +8,21 @@ class App extends Component {
   state = {
     products: {},
     shoppingCart: {},
+    voucherCodes: [],
+    activeVoucherCode: null,
   }
 
   componentWillMount = () => {
     this.loadProductsIntoState(products)
+    this.loadVoucherCodesIntoState(voucherCodes)
   }
 
   loadProductsIntoState = products => {
     this.setState({ products })
+  }
+
+  loadVoucherCodesIntoState = VoucherCodes => {
+    this.setState({ voucherCodes })
   }
 
   addToCart = key => {
@@ -48,6 +56,33 @@ class App extends Component {
     return cartTotal
   }
 
+  calculateDiscountedTotal = () => {
+    if (this.state.activeVoucherCode) {
+      const discountAmount = this._getVoucherObject(
+        this.state.activeVoucherCode
+      ).discountAmount
+      const discountedTotal = this.calculateTotal() - discountAmount
+      return discountedTotal
+    }
+    return this.calculateTotal()
+  }
+
+  setActiveVoucherCode = voucherCode => {
+    this.setState({ activeVoucherCode: voucherCode })
+  }
+
+  voucherCodeIsValid = voucherCode => {
+    const voucherObject = this._getVoucherObject(voucherCode)
+    return voucherObject ? true : false
+  }
+
+  _getVoucherObject = voucherCode => {
+    const voucherObject = this.state.voucherCodes.filter(
+      voucher => voucher.code === voucherCode
+    )
+    return voucherObject[0]
+  }
+
   render = () => {
     return (
       <Fragment>
@@ -60,7 +95,9 @@ class App extends Component {
           products={this.state.products}
           shoppingCart={this.state.shoppingCart}
           removeFromCart={this.removeFromCart}
-          calculateTotal={this.calculateTotal}
+          calculateDiscountedTotal={this.calculateDiscountedTotal}
+          voucherCodeIsValid={this.voucherCodeIsValid}
+          setActiveVoucherCode={this.setActiveVoucherCode}
         />
       </Fragment>
     )

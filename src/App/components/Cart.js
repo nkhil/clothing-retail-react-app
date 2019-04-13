@@ -20,8 +20,13 @@ class ShoppingCart extends PureComponent {
               />
             ))}
           </ul>
+          <VoucherForm
             voucherCodeIsValid={this.props.voucherCodeIsValid}
             setActiveVoucherCode={this.props.setActiveVoucherCode}
+          />
+          <DisplayTotal
+            calculateDiscountedTotal={this.props.calculateDiscountedTotal}
+          />
         </div>
       </Fragment>
     )

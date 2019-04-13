@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DisplayTotal renders correctly 1`] = `
+<h3
+  id="total"
+>
+  Total: 
+  £23.00
+</h3>
+`;

@@ -38,6 +38,16 @@ class App extends Component {
     this.setState({ products })
   }
 
+  calculateTotal = () => {
+    const cartIds = Object.keys(this.state.shoppingCart)
+    const cartTotal = cartIds.reduce((prevTotal, key) => {
+      const productPrice = this.state.products[key].productPrice
+      const count = this.state.shoppingCart[key]
+      return prevTotal + productPrice * count
+    }, 0)
+    return cartTotal
+  }
+
   render = () => {
     return (
       <Fragment>

@@ -24,6 +24,7 @@ const mockProducts = {
 const mockShoppingCart = { product1: 1, product2: 1 }
 
 const mockRemoveFromCart = () => {}
+const mockCalculateTotal = () => 2300
 
 test("ShoppingCart renders correctly", () => {
   const shoppingCart = renderer
@@ -32,6 +33,7 @@ test("ShoppingCart renders correctly", () => {
         products={mockProducts}
         shoppingCart={mockShoppingCart}
         removeFromCart={mockRemoveFromCart}
+        calculateTotal={mockCalculateTotal}
       />
     )
     .toJSON()

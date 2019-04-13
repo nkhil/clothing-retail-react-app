@@ -15,6 +15,11 @@ class App extends Component {
     this.setState({ products })
   }
 
+  addToCart = key => {
+    const shoppingCart = { ...this.state.shoppingCart }
+    shoppingCart[key] = shoppingCart[key] + 1 || 1
+    this.setState({ shoppingCart })
+  }
   render = () => {
     return (
       <Fragment>

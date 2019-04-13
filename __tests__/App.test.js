@@ -15,3 +15,11 @@ beforeEach(() => {
 test("App renders correctly", () => {
   expect(app).toMatchSnapshot()
 })
+
+test("addToCart()", () => {
+  const shoppingBasket = { product1: 1 }
+  const component = renderer.create(<App />)
+  const componentInstance = component.getInstance()
+  componentInstance.addToCart("product1")
+  expect(componentInstance.state.shoppingCart).toEqual(shoppingBasket)
+})

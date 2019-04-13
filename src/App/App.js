@@ -56,6 +56,18 @@ class App extends Component {
     return cartTotal
   }
 
+  VoucherCodeIsValid = VoucherCode => {
+    const VoucherObject = this._getVoucherObject(VoucherCode)
+    return VoucherObject ? true : false
+  }
+
+  _getVoucherObject = VoucherCode => {
+    const VoucherObject = this.state.VoucherCodes.filter(
+      VoucherObject => VoucherObject.code === VoucherCode
+    )
+    return VoucherObject[0]
+  }
+
   render = () => {
     return (
       <Fragment>

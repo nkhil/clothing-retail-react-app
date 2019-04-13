@@ -48,3 +48,19 @@ test("calculateTotal()", () => {
   componentInstance.addToCart("product2")
   expect(componentInstance.calculateTotal()).toEqual(4200)
 })
+
+test("voucherCodeIsValid() with valid voucher code", () => {
+  const mockDiscountCode = { code: "TEST", discountAmount: 500 }
+  const component = renderer.create(<App />)
+  const componentInstance = component.getInstance()
+  componentInstance.state.VoucherCodes = [mockDiscountCode]
+  expect(componentInstance.VoucherCodeIsValid("TEST")).toEqual(true)
+})
+
+test("voucherCodeIsValid() with invalid voucher code", () => {
+  const mockDiscountCode = { code: "TEST", discountAmount: 500 }
+  const component = renderer.create(<App />)
+  const componentInstance = component.getInstance()
+  componentInstance.state.VoucherCodes = [mockDiscountCode]
+  expect(componentInstance.VoucherCodeIsValid("TES")).toEqual(false)
+})

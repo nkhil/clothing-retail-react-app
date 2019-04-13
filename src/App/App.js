@@ -85,6 +85,7 @@ class App extends Component {
           shoppingCart={this.state.shoppingCart}
           removeFromCart={this.removeFromCart}
           VoucherCodeIsValid={this.VoucherCodeIsValid}
+          setActiveVoucherCode={this.setActiveVoucherCode}
         />
       </Fragment>
     )

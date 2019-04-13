@@ -70,9 +70,19 @@ In a real world scenario, I would put this as a question to the client which was
 
 ## Using mock data
 
-As suggested in the requirements, I'm using product data that's stored locally in a flat file (rather than creating a database) and importing this into the application in the `componentWillMount()` lifecycle method provided by React.
+### Products
 
-Every time the app loads up, the data is imported into state.
+The application uses product data that's stored locally in a flat file (as suggested in the requirements). The supplied mock products are loaded into the application's state when the `componentWillMount()` lifecycle method is fired.
+
+### Vouchers
+
+Similar to products, the application uses vouchers stored locally in a flat file.
+
+The discount voucher is a javaScript object with properties. For eg:
+
+`const five = { code: "FIVEOFF", discountAmount: 500 }`
+
+I decided to choose this data structure, as it would allow admins to add or modify discounts without needing to go into the application logic. I have a comment with instructions on how to do this in `helpers/discountCodes.js`. Note that the `discountAmount` property expects data in the form of pennies (similar to products)
 
 **Note:**
 

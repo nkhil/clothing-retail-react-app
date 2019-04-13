@@ -1,9 +1,19 @@
 import React, { Component, Fragment } from "react"
+import products from "./helpers/products"
 
 class App extends Component {
   state = {
     products: {},
   }
+
+  componentWillMount = () => {
+    this.loadProductsIntoState()
+  }
+
+  loadProductsIntoState = () => {
+    this.setState({ products })
+  }
+
   render = () => {
     return (
       <Fragment>

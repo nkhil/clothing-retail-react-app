@@ -1,3 +1,4 @@
+import "@babel/polyfill"
 import React from "react"
 import App from "../src/App/App"
 import renderer from "react-test-renderer"

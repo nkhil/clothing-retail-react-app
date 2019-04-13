@@ -77,3 +77,43 @@ Every time the app loads up, the data is imported into state.
 **Note:**
 
 I have followed this approach as it means minimal changes to the code once a database is introduced.
+
+## Adding items to shopping cart
+
+Instead of putting the entire product into the shopping cart, I have opted for the approach of adding the product's key as the basket item's key, and the quantity as the value.
+
+For eg: Here's what it looks like when the shopping cart has items in it
+
+```
+shoppingCart = {
+  product1: 2,
+  product2: 1,
+}
+```
+
+I believe this approach is more efficient than adding the entire product into the basket.
+
+## Using pure components
+
+TK
+
+## Structuring components
+
+I've followed SRP (single responsibility principle) strictly throughout this process. Every UI element has been separated out into its own component which ensures that the code is easy to change.
+
+**Example component structure:**
+
+```
+<App
+  <ProductList
+    <ProductItem />
+    <ProductItem />
+    <ProductItem />
+  />
+  <ShoppingCart
+    <ShoppingCartItem />
+    <ShoppingCartItem />
+    <ShoppingCartItem />
+  />
+/>
+```

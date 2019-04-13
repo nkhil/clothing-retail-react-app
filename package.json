@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --watchAll",
     "start": "parcel public/index.html",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "updatesnapshot": "jest --update-snapshot"
   },
   "author": "Nikhil Vijayan",
   "license": "MIT",

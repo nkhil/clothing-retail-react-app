@@ -82,7 +82,7 @@ I have followed this approach as it means minimal changes to the code once a dat
 
 Instead of putting the entire product into the shopping cart, I have opted for the approach of adding the product's key as the basket item's key, and the quantity as the value.
 
-For eg: Here's what it looks like when the shopping cart has items in it
+**Here's what it looks like when the shopping cart has items in it**
 
 ```
 shoppingCart = {
@@ -91,7 +91,7 @@ shoppingCart = {
 }
 ```
 
-I believe this approach is more efficient than adding the entire product into the basket.
+I believe this approach (adding a reference instead of the entire object) is more efficient than adding the entire product into the basket.
 
 ## Using pure components
 
@@ -99,9 +99,11 @@ TK
 
 ## Structuring components
 
-I've followed SRP (single responsibility principle) strictly throughout this process. Every UI element has been separated out into its own component which ensures that the code is easy to change.
+I've followed SRP (single responsibility principle) strictly throughout the development process. Every UI element has been separated out into its own component which ensures that each component has a single responsibility, making the application easy to change.
 
-**Example component structure:**
+For eg: Each product item and each shopping cart item are their own components. Content, styling or functionality changes to them is as simple as modifying one component.
+
+### Example component structure:
 
 ```
 <App

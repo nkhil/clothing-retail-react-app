@@ -3,8 +3,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/e7f6f36584af602f5274/maintainability)](https://codeclimate.com/github/nkhil/clothing-retail-react-app/maintainability)
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
-
-[![Apr-14-2019-18-20-47.gif](https://i.postimg.cc/26GN07mL/Apr-14-2019-18-20-47.gif)](https://postimg.cc/tZscTPs9)
+[![Screen-Shot-2019-04-14-at-18-50-45.png](https://i.postimg.cc/cC3rzJ1n/Screen-Shot-2019-04-14-at-18-50-45.png)](https://postimg.cc/vxQYgbVY)
 
 ## Project setup
 

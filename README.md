@@ -174,3 +174,7 @@ For eg: Each product item and each shopping cart item are their own components. 
 ## Private methods
 
 Private methods throughout this project are denoted with a `_` before the function name (for eg: `_getDiscountObject`). Private methods are not to be called by other components or passed as props.
+
+## Testing
+
+[![Screen-Shot-2019-04-14-at-19-41-13.png](https://i.postimg.cc/W1jgPkH8/Screen-Shot-2019-04-14-at-19-41-13.png)](https://postimg.cc/4mLm6mZH)

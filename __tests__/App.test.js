@@ -1,6 +1,7 @@
 import "@babel/polyfill"
 import React from "react"
 import App from "../src/App/App"
+import ReactDOM from "react-dom"
 import renderer from "react-test-renderer"
 
 require("react-router-dom")

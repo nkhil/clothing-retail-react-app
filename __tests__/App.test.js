@@ -67,15 +67,23 @@ test("calculateDiscountedTotal() in the absence of discount code", () => {
 })
 
 test("voucherCodeIsValid() with valid voucher code", () => {
-  const mockDiscountCode = { code: "TEST", discountAmount: 500 }
+  const mockDiscountCode = {
+    code: "FIVEOFF",
+    discountAmount: 500,
+    minimumSpend: 0,
+  }
   const component = renderer.create(<App />)
   const componentInstance = component.getInstance()
   componentInstance.state.voucherCodes = [mockDiscountCode]
-  expect(componentInstance.voucherCodeIsValid("TEST")).toEqual(true)
+  expect(componentInstance.voucherCodeIsValid("FIVEOFF")).toEqual(true)
 })
 
 test("voucherCodeIsValid() with invalid voucher code", () => {
-  const mockDiscountCode = { code: "TEST", discountAmount: 500 }
+  const mockDiscountCode = {
+    code: "TEST",
+    discountAmount: 500,
+    minimumSpend: 0,
+  }
   const component = renderer.create(<App />)
   const componentInstance = component.getInstance()
   componentInstance.state.voucherCodes = [mockDiscountCode]

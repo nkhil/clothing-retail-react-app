@@ -2,4 +2,6 @@ exclude_patterns:
   - "cypress/**"
   - "dist/"
   - "**/node_modules/"
-  - "**/__test__/"
+  - "**/__tests__/"
+  - "coverage/**"
+  - "dist/**"

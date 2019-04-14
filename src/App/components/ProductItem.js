@@ -4,7 +4,7 @@ import { formatPrice } from "../helpers/helperMethods"
 class ProductItem extends Component {
   handleClick = () => {
     this.props.addToCart(this.props.index)
-    this.props.deductProductFromInventory(this.props.index)
+    this.props.modifyProductInventory(this.props.index, -1)
   }
 
   render = () => {

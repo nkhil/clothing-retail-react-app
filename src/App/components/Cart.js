@@ -7,7 +7,7 @@ class ShoppingCart extends Component {
   render = () => {
     return (
       <Fragment>
-        <div className="shopping-cart-container">
+        <div className="shopping-cart-container" id="shoppingCart">
           <h2>Shopping Cart:</h2>
           <ul className="shopping-cart-list">
             {Object.keys(this.props.shoppingCart).map(key => (
@@ -17,12 +17,11 @@ class ShoppingCart extends Component {
                 numberOfItems={this.props.shoppingCart[key]}
                 product={this.props.products[key]}
                 removeFromCart={this.props.removeFromCart}
+                modifyProductInventory={this.props.modifyProductInventory}
               />
             ))}
           </ul>
-          <VoucherForm
-            applyVoucherCode={this.props.applyVoucherCode}
-          />
+          <VoucherForm applyVoucherCode={this.props.applyVoucherCode} />
           <DisplayTotal
             calculateDiscountedTotal={this.props.calculateDiscountedTotal}
           />

@@ -118,20 +118,23 @@ class App extends Component {
   render = () => {
     return (
       <Fragment>
-        <ProductList
-          products={this.state.products}
-          addToCart={this.addToCart}
-          deductProductFromInventory={this.deductProductFromInventory}
-        />
-        <ShoppingCart
-          products={this.state.products}
-          shoppingCart={this.state.shoppingCart}
-          removeFromCart={this.removeFromCart}
-          calculateDiscountedTotal={this.calculateDiscountedTotal}
-          voucherCodeIsValid={this.voucherCodeIsValid}
-          setActiveVoucherCode={this.setActiveVoucherCode}
-          applyVoucherCode={this.applyVoucherCode}
-        />
+        <GlobalStyle />
+        <div className="container">
+          <ProductList
+            products={this.state.products}
+            addToCart={this.addToCart}
+            deductProductFromInventory={this.deductProductFromInventory}
+          />
+          <ShoppingCart
+            products={this.state.products}
+            shoppingCart={this.state.shoppingCart}
+            removeFromCart={this.removeFromCart}
+            calculateDiscountedTotal={this.calculateDiscountedTotal}
+            voucherCodeIsValid={this.voucherCodeIsValid}
+            setActiveVoucherCode={this.setActiveVoucherCode}
+            applyVoucherCode={this.applyVoucherCode}
+          />
+        </div>
       </Fragment>
     )
   }

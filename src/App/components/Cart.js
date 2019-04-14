@@ -7,9 +7,9 @@ class ShoppingCart extends Component {
   render = () => {
     return (
       <Fragment>
-        <div id="shoppingCart">
-          <h2>Basket:</h2>
-          <ul>
+        <div className="shopping-cart-container">
+          <h2>Shopping Cart:</h2>
+          <ul className="shopping-cart-list">
             {Object.keys(this.props.shoppingCart).map(key => (
               <ShoppingCartItem
                 key={key}

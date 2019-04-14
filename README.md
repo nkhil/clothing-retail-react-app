@@ -1,6 +1,8 @@
-# Responsive web app for clothing retailer
+# Responsive web app for a clothing retailer
 
 Fully responsive React application styled using `styled-components`. Tested using `jest` and `react-test-renderer` for unit tests and `cypress` for end-to-end (integration) tests.
+
+[Click to see a 1 min demo →]()
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/e7f6f36584af602f5274/maintainability)](https://codeclimate.com/github/nkhil/clothing-retail-react-app/maintainability)
 
@@ -29,14 +31,14 @@ This project uses `jest` along with `react-test-renderer` for unit testing and `
 
 **Feature (integration) tests:**
 
-- From the application root, run `npm run cypress`. This will open up the Cypress runner - Click on `run all specs` (alternatively, click on a test to run that specific test)
+- From the application root, run `npm run cypress`. This will open up the Cypress runner - Click on `run all specs` (alternatively, click on a test to run a specific test)
 
 ## Technologies used
 
 - Built using **React.js** from scratch (_not_ create-react-app)
 - Unit tested using **Jest** (along with **React test renderer**)
 - End-to-end testing (integration testing) using **Cypress**
-- **Parcel** is used as bundler
+- **Parcel** is used as the bundler (and for the development server)
 
 # Approach
 
@@ -44,17 +46,27 @@ This project uses `jest` along with `react-test-renderer` for unit testing and `
 
 [![Screen-Shot-2019-04-14-at-19-41-13.png](https://i.postimg.cc/W1jgPkH8/Screen-Shot-2019-04-14-at-19-41-13.png)](https://postimg.cc/4mLm6mZH)
 
+- All the `render()` methods are tested using snapshot testing to detect undesirable changes as the app is developed 
+- All the functions elements (business logic) are tested for behaviour using assertions
+- Integration tests test the functionality of the aplication from the user's perspective (for eg: `App doesn't allow adding a product once the inventory is exhausted`)
+
+**Note:**
+
+As mock data is being used, the tests depend on the state of the data (for eg: a test depend on `product1`'s price in order to pass the assertion). This is not ideal. When a development database is used, it's much easier to use mock data, and delete all data in order to control all variables and test as close to a real-world scenario. 
+
+
+
 ## Application architecture
 
 As I'm using React, the application follows the [Flux application architecture](https://facebook.github.io/flux/) where data flow is unidirectional, i.e. the `App` component retains aplication state, business logic and also is responsible for rendering the related components.
 
 State and logic (functions) are passed into other components as props.
 
-Below is an illustrated example where the `ProductItem` component receives it's state directly from `App`. When the `Add to cart` button is clicked on the `ProductItem` component, it fires the `addToCart()` function that then causes the `shoppingCart`'s state to change.
+Below is an illustrated example where the `ProductItem` component receives it's state directly from `App`. When the `Add to cart` button is clicked on the `ProductItem` component, it fires the `addToCart()` function that then causes the App's `shoppingCart` state to change.
 
 [![Untitled-1.jpg](https://i.postimg.cc/2SScDyys/Untitled-1.jpg)](https://postimg.cc/jLBQ6szc)
 
-## Commit message approach
+## Commit message philosophy
 
 I've followed the [Atomic commit message](https://seesparkbox.com/foundry/atomic_commits_with_git) strategy to keep my commits to one feature, fix or improvement.
 
@@ -85,7 +97,7 @@ Product prices are stored as integers (in pennies) for maximum accuracy. A helpe
 
 The requirements mention to `display all of the available products, as well as a shopping cart`.
 
-I am assuming that it means that the user should see both components at the same time so that adding an item to the shopping cart will instantly update the shopping cart that's visible on the page.
+I assumed that it means that the user should see both components at the same time so that adding an item to the shopping cart will instantly update the shopping cart that's visible on the page.
 
 **Note:**
 

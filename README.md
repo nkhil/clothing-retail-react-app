@@ -33,7 +33,7 @@ This project uses `jest` along with `react-test-renderer` for unit testing and `
 
 - From the application root, run `npm run cypress`. This will open up the Cypress runner - Click on `run all specs` (alternatively, click on a test to run a specific test)
 
-## Technologies used
+## Libraries / Frameworks used
 
 - Built using **React.js** from scratch (_not_ create-react-app)
 - Unit tested using **Jest** (along with **React test renderer**)
@@ -81,7 +81,7 @@ I'm unable to add out of stock products to the shopping cart
 
 **Note:**
 
-As mock data is being used, the tests depend on the state of the data (for eg: a test depend on `product1`'s price in order to pass the assertion). This is not ideal. When a development database is used, it's much easier to use mock data, and delete all data in order to control all variables and test as close to a real-world scenario.
+As mock data is being used, the tests depend on the state of the data (for eg: a test might depend on `product1`'s price in order to pass the assertion). This is not ideal. When a development database is used, it's much easier to use mock data, and delete all data in order to control all variables and test as close to a real-world scenario.
 
 ## Application architecture
 
@@ -89,9 +89,77 @@ As I'm using React, the application follows the [Flux application architecture](
 
 State and logic (functions) are passed into other components as props.
 
-Below is an illustrated example where the `ProductItem` component receives it's state directly from `App`. When the `Add to cart` button is clicked on the `ProductItem` component, it fires the `addToCart()` function that then causes the App's `shoppingCart` state to change.
+Below is an illustrated example where the `ProductItem` component receives it's state directly from `App`. When the `Add to cart` button is clicked on the `ProductItem` component, it calls the `addToCart()` function that then causes the App's `shoppingCart` state to change.
 
 [![Untitled-1.jpg](https://i.postimg.cc/2SScDyys/Untitled-1.jpg)](https://postimg.cc/jLBQ6szc)
+
+## Application functionality
+
+Quick runthrough of the application functionality: 
+
+#### On Application load
+When the application is first loaded, the `componentWillMount()` method is used to import products and discountVouchers from the `App/mocks` directory and set it to state. 
+
+**Here's what the application state looks like on start (In React's dev tools):**
+[![Screen-Shot-2019-04-14-at-23-28-19.png](https://i.postimg.cc/52DTBrw7/Screen-Shot-2019-04-14-at-23-28-19.png)](https://postimg.cc/3kCt7nfm)
+
+#### Displaying products on the page
+The `<ProductList />` component with nested `<ProductItem />` components (for each product item) is used to render all the products in state to view layer. 
+
+In order to present the prices, the `formatPrice()` helper method (from `App/helpers`) is used. 
+
+Each `<ProductItem />` component displays an `add to cart` button. 
+
+#### Adding products to shopping cart
+
+When the 'Add to cart' button is clicked on, it fires the `addToCart()` function that adds the product's key, along with a number to `<App />`'s state. 
+
+Adding a product to the shopping cart also fires the `modifyProductInventory()` function that's used to decrease the `productQuantity` property by one.
+
+**Here's what adding products into the shopping cart looks like in React's dev tools**
+
+[![Apr-14-2019-23-38-17.gif](https://i.postimg.cc/G2fXR8qM/Apr-14-2019-23-38-17.gif)](https://postimg.cc/mzQYNDxM)
+
+### Adding voucher codes
+
+When a user enters a voucher code and  clicks 'apply', here's the sequence of events that takes place: 
+
+- `applyVoucherCode()` is called
+- As a result, `voucherCodeIsValid(voucherCode)` is called to check: 
+  - if the code exists in state
+  - if it meets the minimum spend
+  - if it's a special code (for eg: the 15% off code that requires a purchase of at least 1 footwear item), it calls the necessary function (`_shoppingCartContainsFootwear()` in this case)
+  - it then returns true or false if the conditions are met
+- If `voucherCodeIsValid()` returns true, `setActiveVoucherCode()` is called, which sets the (valid) code into the application's state under `activeVoucherCode`
+- If `voucherCodeIsValid()` returns false, it calls the javaScript `Alert` function that displays an alert to the user. 
+
+**Here's a quick screen grab of the state change**
+[![Apr-14-2019-23-51-06.gif](https://i.postimg.cc/7hGwPzDb/Apr-14-2019-23-51-06.gif)](https://postimg.cc/YLHJbhvw)
+
+You can see [the application respond with an alert in this short 1 min video](https://youtu.be/-nI2VIfAg2A)
+
+### Displaying the total price
+
+The application uses a `calculateDiscountedTotal()` function that 
+
+- Checks for the presence of `activeDiscountCode` in state. 
+- If there is an active voucher code, it retrieves the discount amount from the voucher object (more about the voucher object data structure below)
+- it then uses the `_calculateTotal()` function to get the total price (without the discount), deducts the discount amount and returns the total discounted price. 
+- If there isn't an active voucher, it directly returns the total price (using `_calculateTotal()`)
+
+### Not letting users add out of stock items into the shopping cart
+
+In the `render()` method for the `<ProductItem/>` component, the `isAvailable` variable returns true if the product quantity is above 0 and false if not. This is used to deactivate the `Add to cart` button and change the text to `Sold out!`.
+
+**Here's a quick screen grab**
+
+[![Apr-15-2019-00-08-03.gif](https://i.postimg.cc/y8v92J12/Apr-15-2019-00-08-03.gif)](https://postimg.cc/K13RM8g5)
+
+### Putting items from the shopping cart back into products
+
+The `Remove` button on basket items calls `modifyProductInventory()` which will decrease the number of items (if basket contains more than one of any type), or delete the item from the basket if there's only one of it. 
+
+[![Apr-15-2019-00-16-40.gif](https://i.postimg.cc/K8DSb2w6/Apr-15-2019-00-16-40.gif)](https://postimg.cc/fVyg76wC)
 
 ## Commit message philosophy
 

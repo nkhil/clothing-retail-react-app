@@ -2,6 +2,7 @@ import "@babel/polyfill"
 import React from "react"
 import ProductList from "../src/App/components/ProductList"
 import renderer from "react-test-renderer"
+import ReactDOM from "react-dom"
 
 require("react-router-dom")
 jest.mock("react-router-dom")
@@ -23,6 +24,18 @@ const mockProducts = {
 
 const mockAddToCart = () => {}
 const mockDeductProductFromInventory = () => {}
+
+test("ProductList renders without crashing", () => {
+  const div = document.createElement("div")
+  ReactDOM.render(
+    <ProductList
+      products={mockProducts}
+      addToCart={mockAddToCart}
+      deductProductFromInventory={mockDeductProductFromInventory}
+    />,
+    div
+  )
+})
 
 test("ProductList renders correctly", () => {
   const productList = renderer

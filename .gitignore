@@ -1,6 +1,7 @@
 node_modules/
 .cache/
 dist/
+.DS*
 
 # Ignore test-related files
 coverage/*

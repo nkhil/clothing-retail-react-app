@@ -3,6 +3,7 @@ import products from "./helpers/products"
 import voucherCodes from "./helpers/voucherCodes"
 import ProductList from "./components/ProductList"
 import ShoppingCart from "./components/Cart"
+import GlobalStyle from "./components/styles/GlobalStyles"
 
 class App extends Component {
   state = {

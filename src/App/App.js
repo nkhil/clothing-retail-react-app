@@ -73,8 +73,32 @@ class App extends Component {
 
   voucherCodeIsValid = voucherCode => {
     const voucherObject = this._getVoucherObject(voucherCode)
-    return voucherObject ? true : false
+    if (voucherObject && voucherCode === "FIFTEENOFF") {
+      return this._checkFifteenOffCriteria(voucherObject.minimumSpend)
+    }
+    if (voucherObject) {
+      return this._voucherMeetsMinimumSpend(voucherObject.minimumSpend)
+    }
+    return false
   }
+
+  _checkFifteenOffCriteria = minimumSpend => {
+    return (
+      this._voucherMeetsMinimumSpend(minimumSpend) &&
+      this._shoppingCartContainsFootwear()
+    )
+  }
+
+  _shoppingCartContainsFootwear = () => {
+    const shoppingCartIds = Object.keys(this.state.shoppingCart)
+    const footwearItemsInCart = shoppingCartIds.filter(key => {
+      return this.state.products[key].productCategory.includes("Footwear")
+    })
+    return footwearItemsInCart.length > 0
+  }
+
+  _voucherMeetsMinimumSpend = minimumSpend =>
+    this.calculateDiscountedTotal() >= minimumSpend
 
   _getVoucherObject = voucherCode => {
     const voucherObject = this.state.voucherCodes.filter(

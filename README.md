@@ -46,11 +46,13 @@ This project uses `jest` along with `react-test-renderer` for unit testing and `
 
 ## Application architecture
 
-As I'm using React, the application follows the [Flux application architecture](https://facebook.github.io/flux/) where data flow is unidirectional, i.e. the `App` component retains aplication state, business logic and also is responsible for rendering the related components. 
+As I'm using React, the application follows the [Flux application architecture](https://facebook.github.io/flux/) where data flow is unidirectional, i.e. the `App` component retains aplication state, business logic and also is responsible for rendering the related components.
 
-State and logic (functions) are passed into other components as props. 
+State and logic (functions) are passed into other components as props.
 
-[![Untitled.jpg](https://i.postimg.cc/bJmfqW8g/Untitled.jpg)](https://postimg.cc/cgtbmDvt)
+Below is an illustrated example where the `ProductItem` component receives it's state directly from `App`. When the `Add to cart` button is clicked on the `ProductItem` component, it fires the `addToCart()` function that then causes the `shoppingCart`'s state to change.
+
+[![Untitled-1.jpg](https://i.postimg.cc/2SScDyys/Untitled-1.jpg)](https://postimg.cc/jLBQ6szc)
 
 ## Commit message approach
 
@@ -66,14 +68,15 @@ Following that, all work is carried out on the `dev` branch, and every feature w
 
 ## Styling
 
-- This project uses `globalStyles` included in `styled-components` 
-- I'm using simple flexbox containers and a simple `media query` in order to make the application responsive on desktop, mobile phones and tablets.
+- This project uses `globalStyles` included in the `styled-components` package
+- To make the application responsive, a flexbox containers and `@media` queries are used
 
-**Note:** Aside from the responsiveness, the styling is purposefully minimal to allow the client to test the prototype. I'm aware that this styling will need to be discarded in the next stages, and hence only a minimal amount of time was spent on it. 
+**Note:** Aside from the responsiveness, the styling is purposefully minimal to allow the client to test the prototype. I'm aware that this styling will need to be discarded in the next stages, and hence only a minimal amount of time was spent on it once all the user stories had been developed.
 
 ## Product Prices
 
-Product prices are stored as integers (in pennies) for maximum accuracy. A helper method (`formatPrice` in `App/helpers.js`) is used to convert the integer into a string for presentation purposes. As this wasn't explicitly stated, product prices are rendered like so: 
+Product prices are stored as integers (in pennies) for maximum accuracy. A helper method (`formatPrice` in `App/helpers.js`) is used to convert the integer into a string for presentation purposes. As this wasn't explicitly stated, product prices are rendered like so:
+
 ```
 £30.50 / £30.00 / £1.00
 ```
@@ -90,7 +93,7 @@ In a real world scenario, I would put this as a question to the client which was
 
 ## Using mock data
 
-Mock data (stored in `./App/mocks`) is used in place of a database. 
+Mock data (stored in `./App/mocks`) is used in place of a database.
 
 ### Products
 
@@ -144,6 +147,7 @@ const fifteen = {
 
 const voucherCodes = [five, ten, fifteen]
 ```
+
 _Note that the `discountAmount` property expects data in the form of pennies (same as products)._
 
 ### Approach to developing the discount voucher feature
@@ -152,7 +156,7 @@ As the discount codes include a fair amount of logic (for eg: `15% off with a mi
 
 With the given discount codes, there was one outlier (15% off) that needs to satisfy an additional condition to be valid (i.e. at least 1 item of footwear purchased). Given the time constraint, I have created private methods ( `_checkFifteenOffCriteria` & `_shoppingCartContainsFootwear`) to satisfy the current requirement.
 
-In the future, If new discount codes are added or amended often, this can be added as an advanced feature with more thought out business logic. 
+In the future, If new discount codes are added or amended often, this can be added as an advanced feature with more thought out business logic.
 
 ## Adding items to shopping cart
 
@@ -195,5 +199,3 @@ For eg: Each product item and each shopping cart item are their own components. 
 ## Private methods
 
 Private methods throughout this project are denoted with a `_` before the function name (for eg: `_getDiscountObject`). Private methods are not to be called by other components or passed as props.
-
-

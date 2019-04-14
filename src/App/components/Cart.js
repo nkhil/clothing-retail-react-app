@@ -21,8 +21,7 @@ class ShoppingCart extends Component {
             ))}
           </ul>
           <VoucherForm
-            voucherCodeIsValid={this.props.voucherCodeIsValid}
-            setActiveVoucherCode={this.props.setActiveVoucherCode}
+            applyVoucherCode={this.props.applyVoucherCode}
           />
           <DisplayTotal
             calculateDiscountedTotal={this.props.calculateDiscountedTotal}

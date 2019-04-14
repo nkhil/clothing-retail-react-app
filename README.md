@@ -121,7 +121,7 @@ Adding a product to the shopping cart also fires the `modifyProductInventory()` 
 
 **Here's what adding products into the shopping cart looks like in React's dev tools**
 
-[![Apr-14-2019-23-38-17.gif](https://i.postimg.cc/G2fXR8qM/Apr-14-2019-23-38-17.gif)](https://postimg.cc/mzQYNDxM)
+[![Apr-15-2019-00-24-00.gif](https://i.postimg.cc/FRDHHSqQ/Apr-15-2019-00-24-00.gif)](https://postimg.cc/ftSNHVDH)
 
 ### Adding voucher codes
 

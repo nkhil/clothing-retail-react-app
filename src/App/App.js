@@ -97,8 +97,9 @@ class App extends Component {
     return footwearItemsInCart.length > 0
   }
 
-  _voucherMeetsMinimumSpend = minimumSpend =>
-    this.calculateDiscountedTotal() >= minimumSpend
+  _voucherMeetsMinimumSpend = minimumSpend => {
+    return this.calculateDiscountedTotal() >= minimumSpend
+  }
 
   _getVoucherObject = voucherCode => {
     const voucherObject = this.state.voucherCodes.filter(

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react"
-import products from "./helpers/products"
-import voucherCodes from "./helpers/voucherCodes"
+import products from "./mocks/products"
+import voucherCodes from "./mocks/voucherCodes"
 import ProductList from "./components/ProductList"
 import ShoppingCart from "./components/Cart"
 import GlobalStyle from "./components/styles/GlobalStyles"

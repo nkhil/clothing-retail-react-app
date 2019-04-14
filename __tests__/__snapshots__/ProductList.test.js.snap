@@ -16,6 +16,7 @@ exports[`ProductList renders correctly 1`] = `
     </p>
     <button
       className="product1-button"
+      disabled={false}
       onClick={[Function]}
     >
       Add to cart
@@ -35,6 +36,7 @@ exports[`ProductList renders correctly 1`] = `
     </p>
     <button
       className="product2-button"
+      disabled={false}
       onClick={[Function]}
     >
       Add to cart

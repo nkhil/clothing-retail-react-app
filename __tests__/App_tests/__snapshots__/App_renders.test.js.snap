@@ -358,6 +358,7 @@ exports[`App renders correctly 1`] = `
   </ul>
   <div
     className="shopping-cart-container"
+    id="shoppingCart"
   >
     <h2>
       Shopping Cart:

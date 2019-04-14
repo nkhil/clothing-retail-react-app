@@ -4,6 +4,8 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
+[![Apr-14-2019-18-20-47.gif](https://i.postimg.cc/26GN07mL/Apr-14-2019-18-20-47.gif)](https://postimg.cc/tZscTPs9)
+
 ## Project setup
 
 Steps to setup and run the project locally:

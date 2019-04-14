@@ -8,8 +8,7 @@ class VoucherForm extends Component {
     const voucherCode = this.voucherCodeRef.current.value.toUpperCase()
     if (this.props.voucherCodeIsValid(voucherCode)) {
       this.props.setActiveVoucherCode(voucherCode)
-    }
-    alert("Invalid discount code")
+    } else alert("Invalid discount code")
   }
 
   render = () => {

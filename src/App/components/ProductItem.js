@@ -8,16 +8,26 @@ class ProductItem extends Component {
   }
 
   render = () => {
-    const { productName, productPrice, productCategory } = this.props.details
+    const {
+      productName,
+      productPrice,
+      productCategory,
+      productQuantity,
+    } = this.props.details
     const index = this.props.index
+    const isAvailable = productQuantity > 0
     return (
       <Fragment>
         <li id={this.props.index}>
           <h3>{productName}</h3>
           <h4>{formatPrice(productPrice)}</h4>
           <p>{productCategory}</p>
-          <button className={`${index}-button`} onClick={this.handleClick}>
-            Add to cart
+          <button
+            className={`${index}-button`}
+            onClick={this.handleClick}
+            disabled={!isAvailable}
+          >
+            {isAvailable ? "Add to cart" : "Sold out!"}
           </button>
         </li>
       </Fragment>

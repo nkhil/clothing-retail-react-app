@@ -1,8 +1,8 @@
 # Responsive website for clothing retailer
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
-
 [![Maintainability](https://api.codeclimate.com/v1/badges/e7f6f36584af602f5274/maintainability)](https://codeclimate.com/github/nkhil/clothing-retail-react-app/maintainability)
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 ## Project setup
 
@@ -74,19 +74,62 @@ In a real world scenario, I would put this as a question to the client which was
 
 The application uses product data that's stored locally in a flat file (as suggested in the requirements). The supplied mock products are loaded into the application's state when the `componentWillMount()` lifecycle method is fired.
 
+**Products data structure**
+
+```javascript
+product4: {
+    productName: "Flip Flops, Red",
+    productCategory: "Men's Footwear",
+    productPrice: 1900,
+    productQuantity: 6,
+  },
+  product5: {
+    productName: "Flip Flops, Blue",
+    productCategory: "Men's Footwear",
+    productPrice: 1900,
+    productQuantity: 0,
+  },
+  product6: {
+    productName: "Gold Button Cardigan, Black",
+    productCategory: "Women’s Casualwear",
+    productPrice: 16700,
+    productQuantity: 6,
+  }
+```
+
 ### Vouchers
 
 Similar to products, the application uses vouchers stored locally in a flat file.
 
 The discount voucher is a javaScript object with properties. For eg:
 
-`const five = { code: "FIVEOFF", discountAmount: 500 }`
+```javascript
+const five = {
+  code: "FIVEOFF",
+  discountAmount: 500,
+  minimumSpend: 0,
+}
+const ten = {
+  code: "TENOFF",
+  discountAmount: 1000,
+  minimumSpend: 5000,
+}
+const fifteen = {
+  code: "FIFTEENOFF",
+  discountAmount: 1500,
+  minimumSpend: 7500,
+}
+```
 
-I decided to choose this data structure, as it would allow admins to add or modify discounts without needing to go into the application logic. I have a comment with instructions on how to do this in `helpers/discountCodes.js`. Note that the `discountAmount` property expects data in the form of pennies (similar to products)
+I decided to choose this data structure, as it would allow admins to add or modify discounts without needing to go into the application logic.
 
-**Note:**
+Note that the `discountAmount` property expects data in the form of pennies (similar to products).
 
-I have followed this approach as it means minimal changes to the code once a database is introduced.
+As the discount codes include a fair amount of logic (for eg: `15% off with a minimum spend of £75 and at least 1 item of footwear purchased`), I have added a `minimumSpend` property to the discount voucher's data structure (as can be seen above).
+
+With the given discount codes, there was one outlier (15% off) that needs to satisfy an additional condition to be valid (i.e. at least 1 item of footwear). Given the time constraint, I have created private methods (namely `_checkFifteenOffCriteria` & `_shoppingCartContainsFootwear`) to satisfy the current requirement.
+
+If new discount codes are added or amended often, this can be added as an advanced feature with more thought out business logic. I have tried to stick to the provided requirements as best as I can.
 
 ## Adding items to shopping cart
 
@@ -94,7 +137,7 @@ Instead of putting the entire product into the shopping cart, I have opted for t
 
 **Here's what it looks like when the shopping cart has items in it**
 
-```
+```javascript
 shoppingCart = {
   product1: 2,
   product2: 1,
@@ -102,10 +145,6 @@ shoppingCart = {
 ```
 
 I believe this approach (adding a reference instead of the entire object) is more efficient than adding the entire product into the basket.
-
-## Using pure components
-
-TK
 
 ## Structuring components
 
@@ -132,4 +171,4 @@ For eg: Each product item and each shopping cart item are their own components. 
 
 ## Private methods
 
-Private methods throughout this project are denoted with a `_` before the function name (for eg: `_getDiscountObject`). Private methods are not to be called by other components.
+Private methods throughout this project are denoted with a `_` before the function name (for eg: `_getDiscountObject`). Private methods are not to be called by other components or passed as props.

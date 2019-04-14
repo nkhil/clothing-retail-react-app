@@ -1,21 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ProductList renders correctly 1`] = `
-<ul>
+<ul
+  className="products-list"
+>
   <li
+    className="product"
     id="product1"
   >
-    <h3>
-      Almond Toe Court Shoes, Patent Black
-    </h3>
-    <h4>
-      £99.00
-    </h4>
-    <p>
-      Women's Footwear
-    </p>
+    <div
+      className="product-details"
+    >
+      <h3>
+        Almond Toe Court Shoes, Patent Black
+      </h3>
+      <h4>
+        £99.00
+      </h4>
+      <p>
+        5 available
+      </p>
+      <p>
+        Category: 
+        Women's Footwear
+      </p>
+    </div>
     <button
-      className="product1-button"
+      className="product1-button item-button"
       disabled={false}
       onClick={[Function]}
     >
@@ -23,19 +34,28 @@ exports[`ProductList renders correctly 1`] = `
     </button>
   </li>
   <li
+    className="product"
     id="product2"
   >
-    <h3>
-      Suede Shoes, Blue
-    </h3>
-    <h4>
-      £42.00
-    </h4>
-    <p>
-      Women's Footwear
-    </p>
+    <div
+      className="product-details"
+    >
+      <h3>
+        Suede Shoes, Blue
+      </h3>
+      <h4>
+        £42.00
+      </h4>
+      <p>
+        4 available
+      </p>
+      <p>
+        Category: 
+        Women's Footwear
+      </p>
+    </div>
     <button
-      className="product2-button"
+      className="product2-button item-button"
       disabled={false}
       onClick={[Function]}
     >

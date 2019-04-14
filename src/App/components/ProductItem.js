@@ -18,12 +18,15 @@ class ProductItem extends Component {
     const isAvailable = productQuantity > 0
     return (
       <Fragment>
-        <li id={this.props.index}>
-          <h3>{productName}</h3>
-          <h4>{formatPrice(productPrice)}</h4>
-          <p>{productCategory}</p>
+        <li id={this.props.index} className="product">
+          <div className="product-details">
+            <h3>{productName}</h3>
+            <h4>{formatPrice(productPrice)}</h4>
+            <p>{isAvailable ? `${productQuantity} available` : ""}</p>
+            <p>Category: {productCategory}</p>
+          </div>
           <button
-            className={`${index}-button`}
+            className={`${index}-button item-button`}
             onClick={this.handleClick}
             disabled={!isAvailable}
           >

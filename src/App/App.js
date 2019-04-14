@@ -21,7 +21,7 @@ class App extends Component {
     this.setState({ products })
   }
 
-  loadVoucherCodesIntoState = VoucherCodes => {
+  loadVoucherCodesIntoState = voucherCodes => {
     this.setState({ voucherCodes })
   }
 

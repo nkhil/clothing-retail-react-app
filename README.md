@@ -1,4 +1,6 @@
-# Responsive website for clothing retailer
+# Responsive web app for clothing retailer
+
+Fully responsive React application styled using `styled-components`. Tested using `jest` and `react-test-renderer` for unit tests and `cypress` for end-to-end (integration) tests.
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/e7f6f36584af602f5274/maintainability)](https://codeclimate.com/github/nkhil/clothing-retail-react-app/maintainability)
 
@@ -13,7 +15,7 @@ Steps to setup and run the project locally:
 - Clone or fork this repo with `git clone https://github.com/nkhil/clothing-retail-react-app.git`
 - Go into the application root with `cd clothing-retail-react-app`
 - To install dependencies, type `npm install`
-- 
+-
 - To start the server, type `npm run start`
 - Visit `http://localhost:1234/` in any modern browser to see the app in action
 
@@ -36,7 +38,7 @@ Steps to run the test suite:
 
 - Built using **React.js** from scratch (i.e. not create react app)
 - Unit tested using **Jest** (along with **React test renderer**)
-- End-to-end testing (integration testing) using **Cypress** 
+- End-to-end testing (integration testing) using **Cypress**
 - **Parcel** for development server and build
 
 # Approach

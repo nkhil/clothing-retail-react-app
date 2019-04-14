@@ -79,7 +79,7 @@ Following that, all work is carried out on the `dev` branch, and every feature w
 ## Styling
 
 - This project uses `globalStyles` included in the `styled-components` package
-- To make the application responsive, a flexbox containers and `@media` queries are used
+- To make the application responsive, flexbox containers and `@media` queries are used
 
 **Note:** Aside from the responsiveness, the styling is purposefully minimal to allow the client to test the prototype. I'm aware that this styling will need to be discarded in the next stages, and hence only a minimal amount of time was spent on it once all the user stories had been developed.
 

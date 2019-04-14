@@ -37,6 +37,20 @@ test("loadProductsIntoState()", () => {
   componentInstance.loadProductsIntoState(mockProducts)
   expect(componentInstance.state.products).toEqual(mockProducts)
 })
+
+test("loadVoucherCodesIntoState()", () => {
+  const mockVoucherCode = {
+    code: "TENOFF",
+    discountAmount: 1000,
+    minimumSpend: 5000,
+  }
+  const mockVoucherCodesArray = [mockVoucherCode]
+  const component = renderer.create(<App />)
+  const componentInstance = component.getInstance()
+  componentInstance.loadVoucherCodesIntoState(mockVoucherCodesArray)
+  expect(componentInstance.state.voucherCodes).toEqual(mockVoucherCodesArray)
+})
+
 test("addToCart()", () => {
   const shoppingBasket = { product1: 1 }
   const component = renderer.create(<App />)

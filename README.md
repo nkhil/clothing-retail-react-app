@@ -44,7 +44,9 @@ This project uses `jest` along with `react-test-renderer` for unit testing and `
 
 ## Testing
 
-[![Screen-Shot-2019-04-14-at-19-41-13.png](https://i.postimg.cc/W1jgPkH8/Screen-Shot-2019-04-14-at-19-41-13.png)](https://postimg.cc/4mLm6mZH)
+[![Screen-Shot-2019-04-14-at-22-55-29.png](https://i.postimg.cc/QxkDSh6B/Screen-Shot-2019-04-14-at-22-55-29.png)](https://postimg.cc/QHtvdGZs)
+
+[![Screen-Shot-2019-04-14-at-22-54-41.png](https://i.postimg.cc/13mQj2Tv/Screen-Shot-2019-04-14-at-22-54-41.png)](https://postimg.cc/XpzmZHn5)
 
 - All the `render()` methods are tested using snapshot testing to detect undesirable changes as the app is developed
 - All the functions elements (business logic) are tested for behaviour using assertions

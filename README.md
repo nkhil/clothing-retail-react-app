@@ -15,7 +15,7 @@ Steps to setup and run the project locally:
 
 ## Testing
 
-This project uses `jest` along with `react-test-renderer` for unit testing and `cypress` for integration testing.
+This project uses `jest` along with `react-test-renderer` for unit testing and `cypress` for end-to-end integration testing.
 
 Steps to run the test suite:
 
@@ -26,7 +26,7 @@ Steps to run the test suite:
 
 **Feature (integration) tests:**
 
-- From the application root, run `npm run cypress`.
+- From the application root, run `npm run cypress`. This will open up the Cypress runner - Click on 'run all specs' (alternatively, click on a test to run just that specific test)
 
 ## Technologies used
 

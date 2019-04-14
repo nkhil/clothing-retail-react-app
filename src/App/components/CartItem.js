@@ -9,7 +9,7 @@ class ShoppingCartItem extends Component {
     const productName = this.props.product.productName
     return (
       <Fragment>
-        <li id={this.props.index}>
+        <li id={this.props.index} className="product">
           <h3>
             {productName} x {this.props.numberOfItems}
           </h3>

@@ -2,6 +2,7 @@
 
 exports[`ShoppingCart renders correctly 1`] = `
 <li
+  className="product"
   id="product1"
 >
   <h3>

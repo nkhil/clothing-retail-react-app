@@ -5,7 +5,7 @@ class ProductList extends PureComponent {
   render = () => {
     return (
       <Fragment>
-        <ul>
+        <ul className="products-list">
           {Object.keys(this.props.products).map(key => (
             <ProductItem
               key={key}

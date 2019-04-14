@@ -1,8 +1,9 @@
 import React, { Component, Fragment } from "react"
-import products from "./helpers/products"
-import voucherCodes from "./helpers/voucherCodes"
+import products from "./mocks/products"
+import voucherCodes from "./mocks/voucherCodes"
 import ProductList from "./components/ProductList"
 import ShoppingCart from "./components/Cart"
+import GlobalStyle from "./components/styles/GlobalStyles"
 
 class App extends Component {
   state = {
@@ -117,20 +118,23 @@ class App extends Component {
   render = () => {
     return (
       <Fragment>
-        <ProductList
-          products={this.state.products}
-          addToCart={this.addToCart}
-          deductProductFromInventory={this.deductProductFromInventory}
-        />
-        <ShoppingCart
-          products={this.state.products}
-          shoppingCart={this.state.shoppingCart}
-          removeFromCart={this.removeFromCart}
-          calculateDiscountedTotal={this.calculateDiscountedTotal}
-          voucherCodeIsValid={this.voucherCodeIsValid}
-          setActiveVoucherCode={this.setActiveVoucherCode}
-          applyVoucherCode={this.applyVoucherCode}
-        />
+        <GlobalStyle />
+        <div className="container">
+          <ProductList
+            products={this.state.products}
+            addToCart={this.addToCart}
+            deductProductFromInventory={this.deductProductFromInventory}
+          />
+          <ShoppingCart
+            products={this.state.products}
+            shoppingCart={this.state.shoppingCart}
+            removeFromCart={this.removeFromCart}
+            calculateDiscountedTotal={this.calculateDiscountedTotal}
+            voucherCodeIsValid={this.voucherCodeIsValid}
+            setActiveVoucherCode={this.setActiveVoucherCode}
+            applyVoucherCode={this.applyVoucherCode}
+          />
+        </div>
       </Fragment>
     )
   }

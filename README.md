@@ -10,6 +10,8 @@ Steps to setup and run the project locally:
 
 - Clone or fork this repo with `git clone https://github.com/nkhil/clothing-retail-react-app.git`
 - Go into the application root with `cd clothing-retail-react-app`
+- To install dependencies, type `npm install`
+- 
 - To start the server, type `npm run start`
 - Visit `http://localhost:1234/` in any modern browser to see the app in action
 
@@ -30,9 +32,10 @@ Steps to run the test suite:
 
 ## Technologies used
 
-- Built using React.js from scratch (i.e. not create react app)
-- Tested using `cypress` and `jest` along with `react-test-renderer`
-- `parcel` for development server and build
+- Built using **React.js** from scratch (i.e. not create react app)
+- Unit tested using **Jest** (along with **React test renderer**)
+- End-to-end testing (integration testing) using **Cypress** 
+- **Parcel** for development server and build
 
 # Approach
 
@@ -127,7 +130,7 @@ Note that the `discountAmount` property expects data in the form of pennies (sim
 
 As the discount codes include a fair amount of logic (for eg: `15% off with a minimum spend of £75 and at least 1 item of footwear purchased`), I have added a `minimumSpend` property to the discount voucher's data structure (as can be seen above).
 
-With the given discount codes, there was one outlier (15% off) that needs to satisfy an additional condition to be valid (i.e. at least 1 item of footwear). Given the time constraint, I have created private methods (namely `_checkFifteenOffCriteria` & `_shoppingCartContainsFootwear`) to satisfy the current requirement.
+With the given discount codes, there was one outlier (15% off) that needs to satisfy an additional condition to be valid (i.e. at least 1 item of footwear). Given the time constraint, I have created private methods ( `_checkFifteenOffCriteria` & `_shoppingCartContainsFootwear`) to satisfy the current requirement.
 
 If new discount codes are added or amended often, this can be added as an advanced feature with more thought out business logic. I have tried to stick to the provided requirements as best as I can.
 

@@ -2,19 +2,28 @@
 
 exports[`ProductItem renders correctly 1`] = `
 <li
+  className="product"
   id="product1"
 >
-  <h3>
-    Almond Toe Court Shoes, Patent Black
-  </h3>
-  <h4>
-    £99.00
-  </h4>
-  <p>
-    Women's Footwear
-  </p>
+  <div
+    className="product-details"
+  >
+    <h3>
+      Almond Toe Court Shoes, Patent Black
+    </h3>
+    <h4>
+      £99.00
+    </h4>
+    <p>
+      5 available
+    </p>
+    <p>
+      Category: 
+      Women's Footwear
+    </p>
+  </div>
   <button
-    className="product1-button"
+    className="product1-button item-button"
     disabled={false}
     onClick={[Function]}
   >

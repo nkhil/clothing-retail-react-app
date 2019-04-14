@@ -1,22 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App renders correctly 1`] = `
-Array [
-  <ul>
+<div
+  className="container"
+>
+  <ul
+    className="products-list"
+  >
     <li
+      className="product"
       id="product1"
     >
-      <h3>
-        Almond Toe Court Shoes, Patent Black
-      </h3>
-      <h4>
-        £99.00
-      </h4>
-      <p>
-        Women's Footwear
-      </p>
+      <div
+        className="product-details"
+      >
+        <h3>
+          Almond Toe Court Shoes, Patent Black
+        </h3>
+        <h4>
+          £99.00
+        </h4>
+        <p>
+          5 available
+        </p>
+        <p>
+          Category: 
+          Women's Footwear
+        </p>
+      </div>
       <button
-        className="product1-button"
+        className="product1-button item-button"
         disabled={false}
         onClick={[Function]}
       >
@@ -24,19 +37,28 @@ Array [
       </button>
     </li>
     <li
+      className="product"
       id="product2"
     >
-      <h3>
-        Suede Shoes, Blue
-      </h3>
-      <h4>
-        £42.00
-      </h4>
-      <p>
-        Women's Footwear
-      </p>
+      <div
+        className="product-details"
+      >
+        <h3>
+          Suede Shoes, Blue
+        </h3>
+        <h4>
+          £42.00
+        </h4>
+        <p>
+          4 available
+        </p>
+        <p>
+          Category: 
+          Women's Footwear
+        </p>
+      </div>
       <button
-        className="product2-button"
+        className="product2-button item-button"
         disabled={false}
         onClick={[Function]}
       >
@@ -44,19 +66,28 @@ Array [
       </button>
     </li>
     <li
+      className="product"
       id="product3"
     >
-      <h3>
-        Leather Driver Saddle Loafers, Tan
-      </h3>
-      <h4>
-        £34.00
-      </h4>
-      <p>
-        Men's Footwear
-      </p>
+      <div
+        className="product-details"
+      >
+        <h3>
+          Leather Driver Saddle Loafers, Tan
+        </h3>
+        <h4>
+          £34.00
+        </h4>
+        <p>
+          12 available
+        </p>
+        <p>
+          Category: 
+          Men's Footwear
+        </p>
+      </div>
       <button
-        className="product3-button"
+        className="product3-button item-button"
         disabled={false}
         onClick={[Function]}
       >
@@ -64,19 +95,28 @@ Array [
       </button>
     </li>
     <li
+      className="product"
       id="product4"
     >
-      <h3>
-        Flip Flops, Red
-      </h3>
-      <h4>
-        £19.00
-      </h4>
-      <p>
-        Men's Footwear
-      </p>
+      <div
+        className="product-details"
+      >
+        <h3>
+          Flip Flops, Red
+        </h3>
+        <h4>
+          £19.00
+        </h4>
+        <p>
+          6 available
+        </p>
+        <p>
+          Category: 
+          Men's Footwear
+        </p>
+      </div>
       <button
-        className="product4-button"
+        className="product4-button item-button"
         disabled={false}
         onClick={[Function]}
       >
@@ -84,19 +124,28 @@ Array [
       </button>
     </li>
     <li
+      className="product"
       id="product5"
     >
-      <h3>
-        Flip Flops, Blue
-      </h3>
-      <h4>
-        £19.00
-      </h4>
-      <p>
-        Men's Footwear
-      </p>
+      <div
+        className="product-details"
+      >
+        <h3>
+          Flip Flops, Blue
+        </h3>
+        <h4>
+          £19.00
+        </h4>
+        <p>
+          
+        </p>
+        <p>
+          Category: 
+          Men's Footwear
+        </p>
+      </div>
       <button
-        className="product5-button"
+        className="product5-button item-button"
         disabled={true}
         onClick={[Function]}
       >
@@ -104,19 +153,28 @@ Array [
       </button>
     </li>
     <li
+      className="product"
       id="product6"
     >
-      <h3>
-        Gold Button Cardigan, Black
-      </h3>
-      <h4>
-        £167.00
-      </h4>
-      <p>
-        Women’s Casualwear
-      </p>
+      <div
+        className="product-details"
+      >
+        <h3>
+          Gold Button Cardigan, Black
+        </h3>
+        <h4>
+          £167.00
+        </h4>
+        <p>
+          6 available
+        </p>
+        <p>
+          Category: 
+          Women’s Casualwear
+        </p>
+      </div>
       <button
-        className="product6-button"
+        className="product6-button item-button"
         disabled={false}
         onClick={[Function]}
       >
@@ -124,19 +182,28 @@ Array [
       </button>
     </li>
     <li
+      className="product"
       id="product7"
     >
-      <h3>
-        Cotton Shorts, Medium Red
-      </h3>
-      <h4>
-        £30.00
-      </h4>
-      <p>
-        Women’s Casualwear
-      </p>
+      <div
+        className="product-details"
+      >
+        <h3>
+          Cotton Shorts, Medium Red
+        </h3>
+        <h4>
+          £30.00
+        </h4>
+        <p>
+          5 available
+        </p>
+        <p>
+          Category: 
+          Women’s Casualwear
+        </p>
+      </div>
       <button
-        className="product7-button"
+        className="product7-button item-button"
         disabled={false}
         onClick={[Function]}
       >
@@ -144,19 +211,28 @@ Array [
       </button>
     </li>
     <li
+      className="product"
       id="product8"
     >
-      <h3>
-        Fine Stripe Short Sleeve Shirt, Grey
-      </h3>
-      <h4>
-        £49.99
-      </h4>
-      <p>
-        Men’s Casualwear
-      </p>
+      <div
+        className="product-details"
+      >
+        <h3>
+          Fine Stripe Short Sleeve Shirt, Grey
+        </h3>
+        <h4>
+          £49.99
+        </h4>
+        <p>
+          9 available
+        </p>
+        <p>
+          Category: 
+          Men’s Casualwear
+        </p>
+      </div>
       <button
-        className="product8-button"
+        className="product8-button item-button"
         disabled={false}
         onClick={[Function]}
       >
@@ -164,19 +240,28 @@ Array [
       </button>
     </li>
     <li
+      className="product"
       id="product9"
     >
-      <h3>
-        Fine Stripe Short Sleeve Shirt, Green
-      </h3>
-      <h4>
-        £39.99
-      </h4>
-      <p>
-        Men’s Casualwear
-      </p>
+      <div
+        className="product-details"
+      >
+        <h3>
+          Fine Stripe Short Sleeve Shirt, Green
+        </h3>
+        <h4>
+          £39.99
+        </h4>
+        <p>
+          9 available
+        </p>
+        <p>
+          Category: 
+          Men’s Casualwear
+        </p>
+      </div>
       <button
-        className="product9-button"
+        className="product9-button item-button"
         disabled={false}
         onClick={[Function]}
       >
@@ -184,19 +269,28 @@ Array [
       </button>
     </li>
     <li
+      className="product"
       id="product10"
     >
-      <h3>
-        Sharkskin Waistcoat, Charcoal
-      </h3>
-      <h4>
-        £75.00
-      </h4>
-      <p>
-        Men’s Formalwear
-      </p>
+      <div
+        className="product-details"
+      >
+        <h3>
+          Sharkskin Waistcoat, Charcoal
+        </h3>
+        <h4>
+          £75.00
+        </h4>
+        <p>
+          2 available
+        </p>
+        <p>
+          Category: 
+          Men’s Formalwear
+        </p>
+      </div>
       <button
-        className="product10-button"
+        className="product10-button item-button"
         disabled={false}
         onClick={[Function]}
       >
@@ -204,19 +298,28 @@ Array [
       </button>
     </li>
     <li
+      className="product"
       id="product11"
     >
-      <h3>
-        Bird Print Dress, Black
-      </h3>
-      <h4>
-        £270.00
-      </h4>
-      <p>
-        Women’s Formalwear
-      </p>
+      <div
+        className="product-details"
+      >
+        <h3>
+          Bird Print Dress, Black
+        </h3>
+        <h4>
+          £270.00
+        </h4>
+        <p>
+          10 available
+        </p>
+        <p>
+          Category: 
+          Women’s Formalwear
+        </p>
+      </div>
       <button
-        className="product11-button"
+        className="product11-button item-button"
         disabled={false}
         onClick={[Function]}
       >
@@ -224,33 +327,44 @@ Array [
       </button>
     </li>
     <li
+      className="product"
       id="product12"
     >
-      <h3>
-        Mid Twist Cut­Out Dress, Pink
-      </h3>
-      <h4>
-        £540.00
-      </h4>
-      <p>
-        Women’s Formalwear
-      </p>
+      <div
+        className="product-details"
+      >
+        <h3>
+          Mid Twist Cut­Out Dress, Pink
+        </h3>
+        <h4>
+          £540.00
+        </h4>
+        <p>
+          5 available
+        </p>
+        <p>
+          Category: 
+          Women’s Formalwear
+        </p>
+      </div>
       <button
-        className="product12-button"
+        className="product12-button item-button"
         disabled={false}
         onClick={[Function]}
       >
         Add to cart
       </button>
     </li>
-  </ul>,
+  </ul>
   <div
-    id="shoppingCart"
+    className="shopping-cart-container"
   >
     <h2>
-      Basket:
+      Shopping Cart:
     </h2>
-    <ul />
+    <ul
+      className="shopping-cart-list"
+    />
     <form
       id="voucher-form"
       onSubmit={[Function]}
@@ -272,6 +386,6 @@ Array [
       Total: 
       £0.00
     </h3>
-  </div>,
-]
+  </div>
+</div>
 `;

@@ -56,6 +56,12 @@ class App extends Component {
     return cartTotal
   }
 
+  applyVoucherCode = voucherCode => {
+    if (this.voucherCodeIsValid(voucherCode)) {
+      this.setActiveVoucherCode(voucherCode)
+    } else alert("Invalid discount code")
+  }
+
   calculateDiscountedTotal = () => {
     if (this.state.activeVoucherCode) {
       const discountAmount = this._getVoucherObject(
@@ -123,6 +129,7 @@ class App extends Component {
           calculateDiscountedTotal={this.calculateDiscountedTotal}
           voucherCodeIsValid={this.voucherCodeIsValid}
           setActiveVoucherCode={this.setActiveVoucherCode}
+          applyVoucherCode={this.applyVoucherCode}
         />
       </Fragment>
     )

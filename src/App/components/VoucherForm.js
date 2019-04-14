@@ -6,9 +6,7 @@ class VoucherForm extends Component {
   handleSubmit = e => {
     e.preventDefault()
     const voucherCode = this.voucherCodeRef.current.value.toUpperCase()
-    if (this.props.voucherCodeIsValid(voucherCode)) {
-      this.props.setActiveVoucherCode(voucherCode)
-    } else alert("Invalid discount code")
+    this.props.applyVoucherCode(voucherCode)
   }
 
   render = () => {

@@ -49,7 +49,3 @@ test("ProductList renders correctly", () => {
     .toJSON()
   expect(productList).toMatchSnapshot()
 })
-
-// products={this.state.products}
-// addToCart={this.addToCart}
-// deductProductFromInventory={this.deductProductFromInventory}

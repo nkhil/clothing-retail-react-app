@@ -77,11 +77,11 @@ test("removeFromCart()", () => {
   expect(componentInstance.state.shoppingCart).toEqual({})
 })
 
-test("calculateTotal()", () => {
+test("_calculateTotal()", () => {
   const component = renderer.create(<App />)
   const componentInstance = component.getInstance()
   componentInstance.addToCart("product2")
-  expect(componentInstance.calculateTotal()).toEqual(4200)
+  expect(componentInstance._calculateTotal()).toEqual(4200)
 })
 
 test("calculateDiscountedTotal() in the presence of discount code", () => {
@@ -168,7 +168,11 @@ test("voucherCodeIsValid() with invalid voucher code", () => {
 test("setActiveVoucherCode()", () => {
   const component = renderer.create(<App />)
   const componentInstance = component.getInstance()
-  const mockDiscountCode = { code: "TEST", discountAmount: 500 }
+  const mockDiscountCode = {
+    code: "TEST",
+    discountAmount: 500,
+    minimumSpend: 0,
+  }
   componentInstance.state.voucherCodes = [mockDiscountCode]
   componentInstance.setActiveVoucherCode("TEST")
   expect(componentInstance.state.activeVoucherCode).toEqual("TEST")

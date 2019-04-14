@@ -46,7 +46,7 @@ class App extends Component {
     this.setState({ products })
   }
 
-  calculateTotal = () => {
+  _calculateTotal = () => {
     const cartIds = Object.keys(this.state.shoppingCart)
     const cartTotal = cartIds.reduce((prevTotal, key) => {
       const productPrice = this.state.products[key].productPrice
@@ -67,10 +67,10 @@ class App extends Component {
       const discountAmount = this._getVoucherObject(
         this.state.activeVoucherCode
       ).discountAmount
-      const discountedTotal = this.calculateTotal() - discountAmount
+      const discountedTotal = this._calculateTotal() - discountAmount
       return discountedTotal
     }
-    return this.calculateTotal()
+    return this._calculateTotal()
   }
 
   setActiveVoucherCode = voucherCode => {

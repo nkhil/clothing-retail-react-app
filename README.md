@@ -2,7 +2,7 @@
 
 Fully responsive React application styled using `styled-components`. Tested using `jest` and `react-test-renderer` for unit tests and `cypress` for end-to-end (integration) tests.
 
-[Click to see a 1 min demo →]()
+[Click to see a 1 min demo →](https://youtu.be/-nI2VIfAg2A)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/e7f6f36584af602f5274/maintainability)](https://codeclimate.com/github/nkhil/clothing-retail-react-app/maintainability)
 
@@ -46,15 +46,13 @@ This project uses `jest` along with `react-test-renderer` for unit testing and `
 
 [![Screen-Shot-2019-04-14-at-19-41-13.png](https://i.postimg.cc/W1jgPkH8/Screen-Shot-2019-04-14-at-19-41-13.png)](https://postimg.cc/4mLm6mZH)
 
-- All the `render()` methods are tested using snapshot testing to detect undesirable changes as the app is developed 
+- All the `render()` methods are tested using snapshot testing to detect undesirable changes as the app is developed
 - All the functions elements (business logic) are tested for behaviour using assertions
 - Integration tests test the functionality of the aplication from the user's perspective (for eg: `App doesn't allow adding a product once the inventory is exhausted`)
 
 **Note:**
 
-As mock data is being used, the tests depend on the state of the data (for eg: a test depend on `product1`'s price in order to pass the assertion). This is not ideal. When a development database is used, it's much easier to use mock data, and delete all data in order to control all variables and test as close to a real-world scenario. 
-
-
+As mock data is being used, the tests depend on the state of the data (for eg: a test depend on `product1`'s price in order to pass the assertion). This is not ideal. When a development database is used, it's much easier to use mock data, and delete all data in order to control all variables and test as close to a real-world scenario.
 
 ## Application architecture
 

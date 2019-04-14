@@ -40,6 +40,33 @@ This project uses `jest` along with `react-test-renderer` for unit testing and `
 - End-to-end testing (integration testing) using **Cypress**
 - **Parcel** is used as the bundler (and for the development server)
 
+## User stories
+
+The application satisfies all of the user stories below.
+
+```
+As a user
+I can add a product to my shopping cart
+
+As a user
+I can remove a product from my shoping cart
+
+As a user
+I can view the total price for the products in my shopping cart
+
+As a user
+I can apply a voucher to my shopping cart
+
+As a user
+I can view the total price for the products in my shopping cart with discounts applied
+
+As a user
+I'm alerted when I apply an invalid voucher to my shopping cart
+
+As a user
+I'm unable to add out of stock products to the shopping cart
+```
+
 # Approach
 
 ## Testing

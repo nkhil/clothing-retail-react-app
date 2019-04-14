@@ -3,6 +3,7 @@ import React, { Component, Fragment } from "react"
 class ShoppingCartItem extends Component {
   handleClick = () => {
     this.props.removeFromCart(this.props.index)
+    this.props.modifyProductInventory(this.props.index, 1)
   }
 
   render = () => {

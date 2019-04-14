@@ -12,7 +12,7 @@ class ProductList extends PureComponent {
               details={this.props.products[key]}
               index={key}
               addToCart={this.props.addToCart}
-              deductProductFromInventory={this.props.deductProductFromInventory}
+              modifyProductInventory={this.props.modifyProductInventory}
             />
           ))}
         </ul>

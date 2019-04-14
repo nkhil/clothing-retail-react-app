@@ -41,9 +41,9 @@ class App extends Component {
     this.setState({ shoppingCart })
   }
 
-  deductProductFromInventory = key => {
+  modifyProductInventory = (key, value) => {
     let products = { ...this.state.products }
-    products[key].productQuantity -= 1
+    products[key].productQuantity += value
     this.setState({ products })
   }
 
@@ -123,7 +123,7 @@ class App extends Component {
           <ProductList
             products={this.state.products}
             addToCart={this.addToCart}
-            deductProductFromInventory={this.deductProductFromInventory}
+            modifyProductInventory={this.modifyProductInventory}
           />
           <ShoppingCart
             products={this.state.products}
@@ -133,6 +133,7 @@ class App extends Component {
             voucherCodeIsValid={this.voucherCodeIsValid}
             setActiveVoucherCode={this.setActiveVoucherCode}
             applyVoucherCode={this.applyVoucherCode}
+            modifyProductInventory={this.modifyProductInventory}
           />
         </div>
       </Fragment>

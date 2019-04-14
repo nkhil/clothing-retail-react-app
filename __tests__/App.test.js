@@ -59,13 +59,21 @@ test("addToCart()", () => {
   expect(componentInstance.state.shoppingCart).toEqual(shoppingBasket)
 })
 
-test("deductProductFromInventory()", () => {
+test("modifyProductInventory() deducting product", () => {
   const component = renderer.create(<App />)
   const componentInstance = component.getInstance()
-  componentInstance.addToCart("product1")
-  componentInstance.deductProductFromInventory("product1")
+  componentInstance.modifyProductInventory("product1", -1)
   expect(componentInstance.state.products["product1"].productQuantity).toEqual(
     4
+  )
+})
+
+test("modifyProductInventory() adding product", () => {
+  const component = renderer.create(<App />)
+  const componentInstance = component.getInstance()
+  componentInstance.modifyProductInventory("product1", 1)
+  expect(componentInstance.state.products["product1"].productQuantity).toEqual(
+    5
   )
 })
 

@@ -17,12 +17,11 @@ class ShoppingCart extends Component {
                 numberOfItems={this.props.shoppingCart[key]}
                 product={this.props.products[key]}
                 removeFromCart={this.props.removeFromCart}
+                modifyProductInventory={this.props.modifyProductInventory}
               />
             ))}
           </ul>
-          <VoucherForm
-            applyVoucherCode={this.props.applyVoucherCode}
-          />
+          <VoucherForm applyVoucherCode={this.props.applyVoucherCode} />
           <DisplayTotal
             calculateDiscountedTotal={this.props.calculateDiscountedTotal}
           />

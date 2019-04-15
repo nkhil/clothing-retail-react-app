@@ -312,7 +312,7 @@ Private methods throughout this project are denoted with a `_` before the functi
 
 ## ESLint
 
-This project uses ESLint as a linter to make sure our my confirms to standards.
+This project uses ESLint as a linter to make sure my confirms to standards.
 
 ## Prettier
 

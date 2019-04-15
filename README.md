@@ -185,7 +185,7 @@ Following that, all work is carried out on the `dev` branch, and every feature w
 
 ## Product Prices
 
-Product prices are stored as integers (in pennies) for maximum accuracy. A helper method (`formatPrice` in `App/helpers.js`) is used to convert the integer into a string for presentation purposes. As this wasn't explicitly stated, product prices are rendered like so:
+Product prices are stored as integers (in pennies) for to avoif floating point errors. A helper method (`formatPrice` in `App/helpers.js`) is used to convert the integer into a string for presentation purposes. As this wasn't explicitly stated, product prices are rendered like so:
 
 ```
 £30.50 / £30.00 / £1.00
